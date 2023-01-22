@@ -1,0 +1,39 @@
+.login-page {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.illustration {
+    width: 50%;
+}
+
+.illustration img {
+    width: 100%;
+    height: 100%;
+}
+
+.login-form {
+   border: 1px solid;
+   height: 30vh;
+}
+
+.login-ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.login-ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: 500;
+}
