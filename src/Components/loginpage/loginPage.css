@@ -1,8 +1,8 @@
 .login-page {
     display: flex;
     gap: 20px;
+    height: 100%;
     justify-content: center;
-    height: 100vh;
     background: url(../illustrations/sign-up\ illustration.png);
     background-position: center;
     /* background-size: cover; */
@@ -14,7 +14,7 @@
 
 .login-form {
    transform: translateY(170px);
-   height: 40vh;
+   height: 300px;
    width: 90%;
    display: flex;
    flex-direction: column;
