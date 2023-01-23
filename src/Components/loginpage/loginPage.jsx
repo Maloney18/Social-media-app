@@ -2,7 +2,7 @@ import './loginPage.css'
 import  axios from 'axios'
 import {FaEyeSlash, FaEye} from 'react-icons/fa'
 import { useState } from 'react';
-import illustration from '../illustrations/login-illustrate.svg'
+// import illustration from '../illustrations/login-illustrate.svg'
 
 // const request = {
 //   method: 'POST',
@@ -67,10 +67,11 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <form className='login-form' onSubmit={(e) => e.preventDefault}>
+      <form className='login-form' onSubmit={(e) => e.preventDefault()}>
+        <h2>Login</h2>
         <ul className='login-ul'>
             <li>
-                <label className='label' htmlFor="email">EMAIL</label>
+                <label className='label' htmlFor="email">Email</label>
                 <input 
                     name='email' 
                     className='input' 
@@ -83,7 +84,7 @@ function LoginPage() {
             </li>
 
             <li>
-                <label className='label' htmlFor="password">PASSWORD</label>
+                <label className='label' htmlFor="password">Password</label>
 
                 { eyesOpen ? 
                     <input 
@@ -109,12 +110,12 @@ function LoginPage() {
         </ul>
 
         <div className="btn">
-            <button> Login </button>
+            <button className='login-btn'> Login </button>
         </div>
       </form>
 
       <div className="illustration">
-        <img src={illustration} alt="illustration" />
+        {/* <img src={illustration} alt="illustration" /> */}
       </div>
     </div>
   );
