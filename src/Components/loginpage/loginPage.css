@@ -20,7 +20,7 @@
    flex-direction: column;
    gap: 20px;
    align-items: center;
-   box-shadow: 0 0 20px rgba(136, 230, 217, 0.788);
+   /* box-shadow: 0 0 20px rgba(136, 230, 217, 0.788); */
 }
 
 .login-ul {
@@ -48,9 +48,20 @@ label {
     border: 1px solid grey;
     width: 200px;
     height: 40px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 20px;
     font-size: 11px;
+}
+
+.input-cont {
+    position: relative;
+}
+
+.switchEye {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 17px;
 }
 
 .login-btn {

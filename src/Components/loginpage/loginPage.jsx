@@ -86,31 +86,48 @@ function LoginPage() {
             <li>
                 <label className='label' htmlFor="password">Password</label>
 
-                { eyesOpen ? 
-                    <input 
-                        name='password' 
-                        className='input eyes' 
-                        type="text" 
-                        id='password' 
-                        value= {userInfo.password} 
-                        onChange={(e) => fillingData(e)} 
-                        placeholder='your password'
-                    /> : 
-                    <input 
-                        name='password' 
-                        className='input eyes' 
-                        type="password" 
-                        id='password' 
-                        value= {userInfo.password} 
-                        onChange={(e) => fillingData(e)} 
-                        placeholder='your password'
-                    /> 
-                }
+                <div className='input-cont'>
+                    { eyesOpen ? 
+                        <input 
+                            name='password' 
+                            className='input eyes' 
+                            type="text" 
+                            id='password' 
+                            value= {userInfo.password} 
+                            onChange={(e) => fillingData(e)} 
+                            placeholder='your password'
+                        /> : 
+                        <input 
+                            name='password' 
+                            className='input eyes' 
+                            type="password" 
+                            id='password' 
+                            value= {userInfo.password} 
+                            onChange={(e) => fillingData(e)} 
+                            placeholder='your password'
+                        /> 
+                    }
+
+                    {   userInfo.password.length !== 0 &&
+                        <span 
+                            className='switchEye'
+                            onClick={toggleEye}
+                        >
+                            { eyesOpen ? <FaEyeSlash /> : <FaEye /> }
+                        </span>
+                    }
+                </div>
+
             </li>
         </ul>
 
         <div className="btn">
-            <button className='login-btn'> Login </button>
+            <button 
+                className='login-btn'
+                onClick={Login}
+            > 
+                Login 
+            </button>
         </div>
       </form>
 
