@@ -13,7 +13,7 @@
 }
 
 .login-form {
-   transform: translateY(170px);
+   transform: translateY(100px);
    height: 300px;
    width: 90%;
    display: flex;
