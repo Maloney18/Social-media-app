@@ -80,6 +80,7 @@ function LoginPage() {
                     value={userInfo.email} 
                     onChange={(e) => fillingData(e)}
                     placeholder='example@gmail.com'
+                    required
                 />
             </li>
 
@@ -96,6 +97,7 @@ function LoginPage() {
                             value= {userInfo.password} 
                             onChange={(e) => fillingData(e)} 
                             placeholder='your password'
+                            required
                         /> : 
                         <input 
                             name='password' 
@@ -105,6 +107,7 @@ function LoginPage() {
                             value= {userInfo.password} 
                             onChange={(e) => fillingData(e)} 
                             placeholder='your password'
+                            required
                         /> 
                     }
 

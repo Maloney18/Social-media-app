@@ -20,6 +20,7 @@
    flex-direction: column;
    gap: 20px;
    align-items: center;
+   mix-blend-mode: multiply;
    /* box-shadow: 0 0 20px rgba(136, 230, 217, 0.788); */
 }
 
