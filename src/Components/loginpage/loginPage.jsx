@@ -67,7 +67,7 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <form className='login-form' onSubmit={(e) => e.preventDefault}>
+      <form className='login-form' onSubmit={(e) => e.preventDefault()}>
         <ul className='login-ul'>
             <li>
                 <label className='label' htmlFor="email">EMAIL</label>
@@ -121,4 +121,3 @@ function LoginPage() {
 }
 
 export default LoginPage;
-// 
