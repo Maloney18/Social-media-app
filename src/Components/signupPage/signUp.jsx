@@ -1,4 +1,4 @@
-import './loginPage.css'
+import './signUp.css'
 import  axios from 'axios'
 import {FaEyeSlash, FaEye} from 'react-icons/fa'
 import { useState } from 'react';
