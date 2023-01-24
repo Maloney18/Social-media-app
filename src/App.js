@@ -1,5 +1,6 @@
 import './App.css';
 import LoginPage from './Components/loginpage/loginPage';
+import SignUpPage from './Components/signupPage/signUp';
 import { Routes, Route } from 'react-router-dom'
 // import  axios from 'axios'
 // import { useEffect, useState } from 'react';
@@ -42,6 +43,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/sign-up' element={<SignUpPage />} />
       </Routes>
     </div>
   );
