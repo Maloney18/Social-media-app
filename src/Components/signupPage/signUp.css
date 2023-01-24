@@ -1,25 +1,25 @@
-.login-page {
+.signup-page {
     display: flex;
     height: 100%;
     justify-content: center;
-    background:no-repeat url('/public/illustrations/mobile-login.png');
+    background:linear-gradient(to top, rgba(255, 255, 255, 0.699), rgba(255, 255, 255, 0.534)), url('/public/illustrations/mobile-signup.png') no-repeat ;
     background-size: contain;
     background-position: bottom;
 }
 
-.illustration {
+.signup-illustration {
     display: none;
 }
 
-.illustration img {
+.signup-illustration img{
     width: 100%;
     object-fit: contain;
     object-position: center;
 }
 
-.login-form {
-   transform: translateY(10vh);
-   height: 300px;
+.signup-form {
+   transform: translateY(5vh);
+   height: 380px;
    width: 90%;
    display: flex;
    flex-direction: column;
@@ -28,15 +28,15 @@
    /* box-shadow: 0 0 20px rgba(136, 230, 217, 0.788); */
 }
 
-.login-ul {
+.signup-ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     align-items: flex-start;
 }
 
-.login-ul li {
+.signup-ul li {
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -50,7 +50,7 @@ label {
 
 .input {
     outline: none;
-    border: 1px solid grey;
+    border: 1px solid rgba(114, 51, 28, 0.87);
     width: 200px;
     height: 40px;
     padding: 5px 15px;
@@ -58,8 +58,11 @@ label {
     font-size: 11px;
 }
 
-.input-cont {
+.signup-input-cont {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .switchEye {
@@ -69,46 +72,55 @@ label {
     font-size: 17px;
 }
 
-.sign-word {
+.pass-info {
+    font-size: 10px;
+    color: orangered;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.log-word {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     color: rgb(34, 98, 170);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.05s ease-in-out;
 }
 
-.sign-word:hover {
+.log-word:hover {
     opacity: 0.7;
 }
 
-.login-btn {
+.signup-btn {
     outline: none;
-    border: 1px solid grey;
+    border: 1px solid orangered;
     width: 120px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgb(30, 26, 43);
+    background-color: rgb(255, 68, 0);
     color: white;
     font-size: 14px;
     font-weight: 700;
     transition: all 0.05s ease-in-out;
 }
 
-.login-btn:hover, .login-btn:focus {
-    opacity: 0.7;
+.signup-btn:hover, .signup-btn:focus {
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(30, 26, 43, 0.575);
+    box-shadow: 0 0 20px #6b63ffcc;
 }
 
 @media screen and (min-width: 900px) {
-    .login-page {
+    .signup-page {
         align-items: center;
         justify-content: space-between;
         background: none;
         gap: 20px;
-        flex-direction: row-reverse;
     }
 
-    .illustration {
+    .signup-illustration {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,23 +129,12 @@ label {
         height: 100%;
     }
 
-    .login-form {
+    .signup-form {
         transform: none;
         width: 50%;
     }
 
-    .input {
-        width: 250px;
-        height: 43px;
-        font-size: 12px;
-    }
-    
-    label {
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    .login-btn {
+    .signup-btn {
         width: 150px;
         height: 47px;
         font-size: 16px;
