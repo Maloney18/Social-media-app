@@ -36,7 +36,7 @@ function LoginPage() {
     // --- The Login function ---
     const Login = async () => {
         try {
-            const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/login', { userInfo})
+            const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/login', userInfo)
             console.log(response.data)
             localStorage.setItem('token', JSON.stringify(response.data.token))
 

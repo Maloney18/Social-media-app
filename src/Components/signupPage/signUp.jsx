@@ -2,7 +2,7 @@ import './signUp.css'
 import  axios from 'axios'
 import {FaEyeSlash, FaEye, FaArrowRight} from 'react-icons/fa'
 import { BiInfoCircle } from 'react-icons/bi'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import illustration from '../illustrations/login-illustrate.svg'
 
@@ -37,8 +37,9 @@ function SignUpPage() {
 
     // --- The Login function ---
     const signUp = async () => {
+        console.log('started submitting')
         try {
-            const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/register', { newUser})
+            const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/register', newUser)
             console.log(response.data)
             localStorage.setItem('token', JSON.stringify(response.data.token))
 
@@ -60,10 +61,15 @@ function SignUpPage() {
 
     // ----- condition for enabling sign-up button ------
     const condition = () => {
-        if (newUser.email.length === 0 || newUser.password.length < 8 || newUser.username.length < 4 ) return true
+
+        if (newUser.email.length === 0 || newUser.password.length < 6 || newUser.username.length < 4 ) return true
 
         return false
     }
+
+    useEffect( () => {
+        condition()
+    }, [newUser?.email, newUser?.password, newUser?.username])
 
     return (
         <div className="signup-page">
@@ -141,8 +147,8 @@ function SignUpPage() {
             <div className="btn">
                 <button 
                     className='signup-btn'
-                    onClick={signUp}
-                    disabled = {condition}
+                    onClick={() => signUp()}
+                    disabled = {condition()}
                 > 
                     Sign up 
                 </button>
