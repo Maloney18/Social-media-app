@@ -3,14 +3,11 @@ import  axios from 'axios'
 import {FaEyeSlash, FaEye} from 'react-icons/fa'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import illustration from '../illustrations/login-illustrate.svg'
 
-// const request = {
-//   method: 'POST',
-//   url: 'https://loop-social-server-side.vercel.app/auth/login',
-//   body: ''
-// }
 
+// ---test case ---
+// email: maloneylekan312@gmail.com
+// password: doingthis
 
 // --------------- PROJECT ENDPOINTS ------------------
 // API URL -- https://loop-social-server-side.vercel.app/
