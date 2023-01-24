@@ -2,7 +2,7 @@
     display: flex;
     height: 100%;
     justify-content: center;
-    background:no-repeat url('/public/illustrations/mobile-login.png');
+    background:linear-gradient(to top, rgba(255, 255, 255, 0.699), rgba(255, 255, 255, 0.534)), url('/public/illustrations/mobile-signup.png') no-repeat ;
     background-size: contain;
     background-position: bottom;
 }
@@ -18,8 +18,8 @@
 }
 
 .signup-form {
-   transform: translateY(10vh);
-   height: 370px;
+   transform: translateY(5vh);
+   height: 380px;
    width: 90%;
    display: flex;
    flex-direction: column;
@@ -100,7 +100,7 @@ label {
     width: 120px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgba(255, 68, 0, 0.856);
+    background-color: rgb(255, 68, 0);
     color: white;
     font-size: 14px;
     font-weight: 700;
