@@ -2,6 +2,7 @@ import './loginPage.css'
 import  axios from 'axios'
 import {FaEyeSlash, FaEye} from 'react-icons/fa'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import illustration from '../illustrations/login-illustrate.svg'
 
 // const request = {
@@ -19,6 +20,7 @@ import { useState } from 'react';
 // LOGIN DATA -- email & password
 
 function LoginPage() {
+    const navigate = useNavigate()
 
     // ----------------  STATES ------------------
     const [userInfo, setUserInfo] = useState({
@@ -132,7 +134,7 @@ function LoginPage() {
             </button>
         </div>
 
-        <p className="nav-to-signUp">You don't have an account yet? <span className='sign-word'>Sign up</span></p>
+        <p className="nav-to-signUp">You don't have an account yet? <span onClick={() => navigate('/sign-up')} className='sign-word'>Sign up</span></p>
       </form>
 
       <div className="illustration">

@@ -1,7 +1,9 @@
 import './signUp.css'
 import  axios from 'axios'
-import {FaEyeSlash, FaEye} from 'react-icons/fa'
+import {FaEyeSlash, FaEye, FaArrowRight} from 'react-icons/fa'
+import { BiInfoCircle } from 'react-icons/bi'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import illustration from '../illustrations/login-illustrate.svg'
 
 // const request = {
@@ -19,6 +21,7 @@ import { useState } from 'react';
 // LOGIN DATA -- email & password
 
 function SignUpPage() {
+    const navigate = useNavigate()
 
     // ----------------  STATES ------------------
     const [newUser, setNewUser] = useState({
@@ -47,7 +50,7 @@ function SignUpPage() {
     // --- onchange function for filling the user info ---
     const fillingData = (e) => {
         const {name, value} = e.target
-        setUserInfo(prevState => ({...prevState, [name]: value}))
+        setNewUser(prevState => ({...prevState, [name]: value}))
     }
 
     // --- function for toggling password visibility ---
@@ -63,12 +66,12 @@ function SignUpPage() {
     }
 
     return (
-        <div className="signUp-page">
-        <form className='signUp-form' onSubmit={(e) => e.preventDefault()}>
-            <h2>Login</h2>
-            <ul className='signUp-ul'>
+        <div className="signup-page">
+        <form className='signup-form' onSubmit={(e) => e.preventDefault()}>
+            <h2>Sign Up</h2>
+            <ul className='signup-ul'>
                 <li>
-                    <label className='label' htmlFor="username">Email</label>
+                    <label className='label' htmlFor="username">Username</label>
                     <input 
                         name='username' 
                         className='input' 
@@ -97,11 +100,11 @@ function SignUpPage() {
                 <li>
                     <label className='label' htmlFor="password">Password</label>
 
-                    <div className='input-cont'>
+                    <div className='signup-input-cont'>
                         { eyesOpen ? 
                             <input 
                                 name='password' 
-                                className='input eyes' 
+                                className='input' 
                                 type="text" 
                                 id='password' 
                                 value= {newUser.password} 
@@ -110,13 +113,13 @@ function SignUpPage() {
                             /> : 
                             <input 
                                 name='password' 
-                                className='input eyes' 
+                                className='input' 
                                 type="password" 
                                 id='password' 
                                 value= {newUser.password} 
                                 onChange={(e) => fillingData(e)} 
-                                placeholder='password must be greater than 6 characters'
                                 maxLength={22}
+                                placeholder='a strong password'
                             /> 
                         }
 
@@ -128,6 +131,8 @@ function SignUpPage() {
                                 { eyesOpen ? <FaEyeSlash /> : <FaEye /> }
                             </span>
                         }
+
+                        <span className='pass-info'> <BiInfoCircle /> password must be 6 or more characters</span>
                     </div>
 
                 </li>
@@ -135,15 +140,15 @@ function SignUpPage() {
 
             <div className="btn">
                 <button 
-                    className='signUp-btn'
+                    className='signup-btn'
                     onClick={signUp}
                     disabled = {condition}
                 > 
-                    Login 
+                    Sign up 
                 </button>
             </div>
 
-            <p className="nav-to-login">Already have an account ? <span className='log-word'>Login</span></p>
+            <p>Already have an account ? <span onClick={() => navigate('/login')} className='log-word'>Login <FaArrowRight /></span></p>
         </form>
 
         <div className="signup-illustration">

@@ -1,0 +1,142 @@
+.signup-page {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    background:no-repeat url('/public/illustrations/mobile-login.png');
+    background-size: contain;
+    background-position: bottom;
+}
+
+.signup-illustration {
+    display: none;
+}
+
+.signup-illustration img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.signup-form {
+   transform: translateY(10vh);
+   height: 370px;
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   /* box-shadow: 0 0 20px rgba(136, 230, 217, 0.788); */
+}
+
+.signup-ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.signup-ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.input {
+    outline: none;
+    border: 1px solid rgba(114, 51, 28, 0.87);
+    width: 200px;
+    height: 40px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.signup-input-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.switchEye {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 17px;
+}
+
+.pass-info {
+    font-size: 10px;
+    color: orangered;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.log-word {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(34, 98, 170);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+}
+
+.log-word:hover {
+    opacity: 0.7;
+}
+
+.signup-btn {
+    outline: none;
+    border: 1px solid orangered;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 68, 0, 0.856);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.05s ease-in-out;
+}
+
+.signup-btn:hover, .signup-btn:focus {
+    cursor: pointer;
+    box-shadow: 0 0 20px #6b63ffcc;
+}
+
+@media screen and (min-width: 900px) {
+    .signup-page {
+        align-items: center;
+        justify-content: space-between;
+        background: none;
+        gap: 20px;
+    }
+
+    .signup-illustration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+    }
+
+    .signup-form {
+        transform: none;
+        width: 50%;
+    }
+
+    .signup-btn {
+        width: 150px;
+        height: 47px;
+        font-size: 16px;
+    }
+}
