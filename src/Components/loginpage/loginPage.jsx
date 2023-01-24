@@ -36,6 +36,7 @@ function LoginPage() {
         try {
             const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/login', { userInfo})
             console.log(response.data)
+            localStorage.setItem('token', JSON.stringify(response.data.token))
 
         } catch (error) {
             console.log(error)
@@ -80,7 +81,6 @@ function LoginPage() {
                     value={userInfo.email} 
                     onChange={(e) => fillingData(e)}
                     placeholder='example@gmail.com'
-                    required
                 />
             </li>
 
@@ -97,7 +97,6 @@ function LoginPage() {
                             value= {userInfo.password} 
                             onChange={(e) => fillingData(e)} 
                             placeholder='your password'
-                            required
                         /> : 
                         <input 
                             name='password' 
@@ -107,7 +106,6 @@ function LoginPage() {
                             value= {userInfo.password} 
                             onChange={(e) => fillingData(e)} 
                             placeholder='your password'
-                            required
                         /> 
                     }
 
@@ -128,14 +126,18 @@ function LoginPage() {
             <button 
                 className='login-btn'
                 onClick={Login}
+                disabled = {userInfo.email.length === 0 || userInfo.password.length === 0 ? true : false}
             > 
                 Login 
             </button>
         </div>
+
+        <p className="nav-to-signUp">You don't have an account yet? <span className='sign-word'>Sign up</span></p>
       </form>
 
       <div className="illustration">
-        {/* <img src={illustration} alt="illustration" /> */}
+        <h1>Welcome back!</h1>
+        <img src='illustrations/login.png' alt="illustration" />
       </div>
     </div>
   );
