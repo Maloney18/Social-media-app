@@ -2,6 +2,8 @@ import './App.css';
 import LoginPage from './Components/loginpage/loginPage';
 import SignUpPage from './Components/signupPage/signUp';
 import { Routes, Route } from 'react-router-dom'
+import { MainContent } from './Components/user';
+import { NotFound } from './Components';
 // import  axios from 'axios'
 // import { useEffect, useState } from 'react';
 
@@ -40,12 +42,14 @@ function App() {
   // }, [])
 
   return (
-    <div className="App">
+    <main className="App">
       <Routes>
+        <Route path='/' element={<MainContent />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/sign-up' element={<SignUpPage />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
-    </div>
+    </main>
   );
 }
 
