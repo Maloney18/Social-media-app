@@ -63,17 +63,28 @@ padding: .7rem 1.7rem;
     align-items: center;
     justify-content: center;
     margin: 0 1rem 0 auto;
+    overflow: hidden;
     
 
     button{
         padding: .656rem;
         border: none;
+        height: 78%;
         border-radius: 1.5rem 0 0 1.5rem;
         background-color: var(--color-gray-lyt);
-        font-size: 1rem;
-        /* text-align: center; */
+        /* font-size: 1.5rem; */
+            /* margin-top: .5rem; */
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
 
+.icon{
+    font-size: 1.5rem;
+
+}
 
     }
     input{
@@ -83,6 +94,8 @@ padding: .7rem 1.7rem;
         border: none;
         outline: none;
         width: 100%;
+        height: 90%;
+        font-size: 1rem;
     
         &::placeholder{
             font-size: 1rem;
@@ -193,6 +206,18 @@ width: 2.5rem;
 height: 2.5rem;
 border-radius: 50%;
 background-color: var(--color-gray-lyt);
+overflow: hidden;
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.icon{
+    font-size: 1.2rem;
+
+}
 
 &:nth-of-type(3){
     width: 3rem;
