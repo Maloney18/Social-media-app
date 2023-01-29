@@ -3,7 +3,7 @@ import LoginPage from './Components/loginpage/loginPage';
 import SignUpPage from './Components/signupPage/signUp';
 import { Routes, Route } from 'react-router-dom'
 import { MainContent } from './Components/user';
-import { NotFound } from './Components';
+import { NotFound } from './Components/pages';
 // import  axios from 'axios'
 // import { useEffect, useState } from 'react';
 

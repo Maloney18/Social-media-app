@@ -35,7 +35,32 @@ body {
 /* --default-font: 'Space Grotesk', sans-serif; */
 --transition: all .5s ease-in-out;
 --default-font-size: 1rem;
+--blueViolet: blueviolet;
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.2rem;
+  background:var(--color-white);  
+}
+
+::-webkit-scrollbar-track {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  -webkit-margin-before: 4.5rem;
+  margin-block-start: 4.5rem;
+  box-shadow: inset 0 0 6px var(--color-white);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color:var(--blueViolet);
+  border-radius: 1rem;
+  border: 2px inset var(--blueViolet);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}  
 
 body{
 font-family: var(--default-font);
@@ -46,6 +71,7 @@ font-size:var(--default-font-size);
     @media screen and (min-width: 64rem) {
     } */
 }
+
 .df{
     display: flex;
     flex-direction: column;
@@ -201,28 +227,94 @@ p{
     }
 }
 
-/* .animate{
-    position: relative;
-animation: slideUp 1s ease-in-out forwards ;
-    @keyframes slideUp {
-        0%{
-           opacity :0 ;
-           top:200px ;
-        }
-        60%{
-           opacity :.2 ;
-        }
-        80%{
-           opacity :.5 ;
-        }
-        100%{
-           opacity :1 ;
-           top:20px ;
-        }
-        
-    }
-    
-} */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-top: -22px;
+  color: var(--blueViolet);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.6s ease;
+  background: var(--color-gray);
+  user-select: none;
+  z-index: 10;
+
+ & >*{
+
+  pointer-events: none;
+
+  }
+
+}
+.add {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: var(--color-white);
+  border: 2px solid var(--color-gray);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.6s ease;
+  background: var(--blueViolet);
+  user-select: none;
+  z-index: 10;
+  right: 1%;
+  bottom:0;
+
+ & >*{
+
+  pointer-events: none;
+
+  }
+
+}
+
+.next {
+  right: 1%;
+}
+.prev {
+  left: 1%;
+}
+
+@media screen and (max-width: 40rem) {
+
+  .prev, .next{
+    font-size: 1rem;
+
+  }
+
+  .next {
+  right: 13%;
+
+}
+.prev {
+  left: 13%;
+}
+
+}
+
+.prev:hover, .next:hover {
+  background: var(--blueViolet) !important;
+  color:var(--color-white) !important;
+  
+}
+
+
+
+
 .videoBox{
     width: 100%;
     border-radius: 2rem;

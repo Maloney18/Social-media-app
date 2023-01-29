@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { NavBtn } from "../features/button";
-import { Section } from "../features/container";
+import { NavBtn } from "../../features/button";
+import { Section } from "../../features/container";
 import { PageNotFound } from "./styled404";
 
 const NotFound = () => {
