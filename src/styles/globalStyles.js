@@ -211,7 +211,10 @@ button{
 
 }
 }
+.bold{
+    font-weight: bold;
 
+}
 p{
     /* font-weight: 500; */
 
@@ -247,7 +250,7 @@ p{
   z-index: 10;
 
  & >*{
-
+margin: 0 auto;
   pointer-events: none;
 
   }

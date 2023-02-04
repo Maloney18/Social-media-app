@@ -10,9 +10,9 @@ align-items: center;
 justify-content: center;
 background-color: var(--primary-color);
 color: var(--color-gray-dark);
-position: sticky;
+position: fixed;
 top: 0;
-z-index: 10;
+z-index: 99;
 font-family: inherit;
 
 .brand-name{
