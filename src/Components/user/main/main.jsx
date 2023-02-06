@@ -3,6 +3,8 @@ import React from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { CgAddR } from "react-icons/cg";
 import { BsCameraVideo } from "react-icons/bs";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { BiMessageDetail } from "react-icons/bi";
 
 import NavBar from "../navbar/navBar";
 import {
@@ -23,9 +25,6 @@ const MainContent = () => {
             <p>brandName</p>
           </div>
           <NavCont>
-            <MenuBar>
-              <div />
-            </MenuBar>
             <div />
             <div className="search-area">
               <button>
@@ -36,15 +35,26 @@ const MainContent = () => {
                 placeholder="search for creators, inspiration and projects..."
               />
             </div>
-            <LinkCont>
-              <LinkWrapper>
+            <LinkCont className="open">
+              <LinkWrapper title="menu">
+                <MenuBar>
+                  <div />
+                </MenuBar>
+              </LinkWrapper>
+              <LinkWrapper hide>
                 <CgAddR className="icon" />
               </LinkWrapper>
 
-              <LinkWrapper>
+              <LinkWrapper hide>
                 <BsCameraVideo className="icon" />
               </LinkWrapper>
-              <LinkWrapper>
+              <LinkWrapper hide>
+                <BiMessageDetail className="icon" />
+              </LinkWrapper>
+              <LinkWrapper hide>
+                <IoMdNotificationsOutline className="icon" />
+              </LinkWrapper>
+              <LinkWrapper hide>
                 <img src={"Images/profile-pic.png"} alt="facial identifier" />
               </LinkWrapper>
             </LinkCont>

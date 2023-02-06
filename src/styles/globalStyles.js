@@ -299,14 +299,6 @@ margin: 0 auto;
 
   }
 
-  .next {
-  right: 13%;
-
-}
-.prev {
-  left: 13%;
-}
-
 }
 
 .prev:hover, .next:hover {
@@ -427,12 +419,13 @@ width: 100%;
 }
 
 .brand{
-width: 110px;
+width: fit-content;
 margin-right: auto;
 margin-left: 0;
+background-color: pink;
 @media screen and (min-width: 45rem) {
     margin-left: -53px;
-    width: 127px;
+    width: fit-content;
 }
 img{
     width: 100%;

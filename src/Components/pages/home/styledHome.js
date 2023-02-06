@@ -5,8 +5,12 @@ export const StyledHome = styled.div`
     .wrapper {
       width: 100%;
       height: fit-content;
-      padding-top: 4rem;
-
+      padding-top: 6rem;
+      
+      @media screen and (min-width: 45rem) {
+        padding-top: 4rem;
+        
+      }
       &:nth-of-type(2) {
         grid-column: span 2;
 
