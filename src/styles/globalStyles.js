@@ -307,7 +307,13 @@ margin: 0 auto;
   
 }
 
+.expand{
+  width: 100%;
+}
 
+.reduce_padding{
+  padding: 0.7rem .5rem !important;
+}
 
 
 .videoBox{

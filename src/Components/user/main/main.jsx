@@ -91,12 +91,12 @@ const MainContent = () => {
             </LinkCont>
           </NavCont>
         </Header>
-        <MobileNavCont>
+        <MobileNavCont className={isOpen ? "reduce_padding" : ""}>
           <div ref={brandRef} className={isOpen ? "zoom-in" : "brand-name"}>
             <p>brandName</p>
           </div>
-          <NavCont navTwo>
-            <div />
+          <NavCont className={isOpen ? "reduce_padding" : ""} navTwo>
+            {/* <div /> */}
             <div className="search-area">
               <button
                 className={isOpen ? "change" : null}

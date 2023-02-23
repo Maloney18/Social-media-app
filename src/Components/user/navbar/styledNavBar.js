@@ -94,7 +94,7 @@ export const NavCont = styled.nav`
 
   .search-area {
     display: flex;
-    /* max-width: 100%; */
+    max-width: 100%;
     margin-right: auto;
     width: fit-content;
     align-items: center;
@@ -108,12 +108,11 @@ export const NavCont = styled.nav`
     } */
 
     ${({ navTwo }) => navTwo && css`
-    padding-right: 1rem;
+    padding-right: .5rem;
     
       .slideOpen {
         width: 100%;
         padding: 0.8rem 0.5rem 0.8rem .5rem;
-        margin-right: auto;
       }
       .change {
         border-radius: 1.5rem 0 0 1.5rem;
