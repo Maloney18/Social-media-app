@@ -12,7 +12,14 @@ export const StyledHome = styled.div`
         
       }
       &:nth-of-type(2) {
-        grid-column: span 2;
+        /* grid-column: span 2; */
+        grid-area: 1;
+            @media screen and (min-width: 45rem) {
+              grid-area: unset;
+              grid-column: span 2;
+
+            }
+
 
         .item {
           width: 100%;
@@ -33,6 +40,7 @@ export const StyledHome = styled.div`
           }
           &:nth-of-type(1) {
             position: relative;
+
             .profile {
               width: fit-content;
 

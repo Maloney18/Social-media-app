@@ -1,11 +1,12 @@
 import React from "react";
 import { Section } from "../../features/container";
 import { StyledHome } from "./styledHome";
-import { AiOutlinePlus } from "react-icons/ai";
+// import { AiOutlinePlus } from "react-icons/ai";
 import { BsBookmark, BsThreeDots } from "react-icons/bs";
 import { FaRegComment } from "react-icons/fa";
 import { BiShareAlt } from "react-icons/bi";
 import { SlLike } from "react-icons/sl";
+import Status from "../../user/status/Status";
 
 const Home = () => {
   return (
@@ -22,81 +23,7 @@ const Home = () => {
               <span className="next">&#10095;</span>
 
               <div className="inner-wrapper">
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="Images/profile-pic.png" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Your story {/* &rarr; */}</p>
-                  </div>
-                  <span className="add">
-                    <AiOutlinePlus className="icon" />
-                  </span>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="Images/profile-pic.png" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
-                <div className="profile">
-                  <div className="img_wrapper">
-                    <img src="" alt="" />
-                  </div>
-                  <div className="text tac">
-                    <p>Username</p>
-                  </div>
-                </div>
+                <Status />
               </div>
             </div>
             <div className="item">
