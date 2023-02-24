@@ -1,3 +1,21 @@
+.loading-div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: orangered;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
 .login-page {
     display: flex;
     height: 100%;
@@ -60,6 +78,8 @@ label {
 
 .input-cont {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .switchEye {
@@ -97,6 +117,19 @@ label {
     opacity: 0.9;
     cursor: pointer;
     box-shadow: 0 0 20px rgba(30, 26, 43, 0.575);
+}
+
+.forget-password {
+    color:rgb(34, 98, 170);
+    align-self: flex-end;
+    font-size: 11px;
+    font-weight: bolder;
+    transition: all 0.05s ease-in-out;
+}
+
+.forget-password:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 900px) {

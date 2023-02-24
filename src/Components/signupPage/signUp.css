@@ -115,6 +115,8 @@ label {
 /* sign up page and login page are sharing this style*/
 .loading-effect {
     animation: identifier 1s ease infinite;
+    font-size: 60px;
+    color: rgb(34, 98, 170);
 }
 
 @keyframes identifier {

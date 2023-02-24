@@ -31,7 +31,7 @@ function SignUpPage() {
         password: ''
     })
 
-    const [loadingEff, setLoadingEff] = useState(false)
+    const [loadingDiv, setLoadingDiv] = useState(false)
     
     const [eyesOpen, setEyesOpen] = useState(false)
 
@@ -40,17 +40,17 @@ function SignUpPage() {
     // --- The SignUp function ---
     const signUp = async () => {
         console.log('started submitting')
-        setLoadingEff(true)
+        setLoadingDiv(true)
 
         try {
             const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/register', newUser)
             console.log(response.data)
             localStorage.setItem('token', JSON.stringify(response.data.token))
-            setLoadingEff(false)
+            setLoadingDiv(false)
 
         } catch (error) {
             console.log(error)
-            setLoadingEff(false)
+            setLoadingDiv(false)
         }
     }
 
@@ -79,6 +79,10 @@ function SignUpPage() {
 
     return (
         <div className="signup-page">
+            {   loadingDiv ? 
+                <div className="loading-div"> <AiOutlineLoading3Quarters className='loading-effect' style={{color: 'orangeRed'}}/> </div>: 
+                ''
+            }
         <form className='signup-form' onSubmit={(e) => e.preventDefault()}>
             <h2>Sign Up</h2>
             <ul className='signup-ul'>
@@ -156,10 +160,7 @@ function SignUpPage() {
                     onClick={() => signUp()}
                     disabled = {condition()}
                 > 
-                    {loadingEff ? 
-                        <AiOutlineLoading3Quarters className='loading-effect'/> : 
-                        "Sign up" 
-                    }
+                    Sign up
                 </button>
             </div>
 

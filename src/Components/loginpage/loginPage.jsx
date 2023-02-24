@@ -2,6 +2,7 @@ import "./loginPage.css";
 import axios from "axios";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { RiAlarmWarningFill } from 'react-icons/ri'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,16 +26,17 @@ function LoginPage() {
     password: "",
   });
 
-  const [loadingEff, setLoadingEff] = useState(false)
+  const [loadingDiv, setLoadingDiv] = useState(false)
+  const [errorMessage, setErrorMessage] = useState(false)
 
   // const [token, setToken] = useState('')
   const [eyesOpen, setEyesOpen] = useState(false);
 
   // --------------- FUNCTIONS -----------------
 
-  // --- The Login function ---
+  // --- The Login function --- 
   const Login = async () => {
-    setLoadingEff(true)
+    setLoadingDiv(true)
     try {
       const response = await axios.post(
         "https://loop-social-server-side.vercel.app/api/auth/login",
@@ -42,12 +44,13 @@ function LoginPage() {
       );
       console.log(response.data);
       localStorage.setItem("token", JSON.stringify(response.data.token));
-      setLoadingEff(false)
+      setLoadingDiv(false)
       navigate('/')
 
     } catch (error) {
       console.log(error);
-      setLoadingEff(false)
+      setLoadingDiv(false)
+      setErrorMessage(true)
     }
   };
 
@@ -76,8 +79,13 @@ function LoginPage() {
 
   return (
     <div className="login-page">
+      {loadingDiv ? 
+        <div className="loading-div"> <AiOutlineLoading3Quarters className='loading-effect'/> </div>: 
+        ''
+      }
       <form className="login-form" onSubmit={(e) => e.preventDefault()}>
         <h2>Login</h2>
+        { errorMessage ? <div className="error"> <RiAlarmWarningFill/> invalid email or password</div> : ''}
         <ul className="login-ul">
           <li>
             <label className="label" htmlFor="email">
@@ -127,6 +135,8 @@ function LoginPage() {
                   {eyesOpen ? <FaEyeSlash /> : <FaEye />}
                 </span>
               )}
+
+              <span className="forget-password">Forgot password?</span>
             </div>
           </li>
         </ul>
@@ -141,10 +151,7 @@ function LoginPage() {
                 : false
             }
           >
-            {loadingEff ? 
-              <AiOutlineLoading3Quarters className='loading-effect'/> : 
-              "Login" 
-            }
+            Login
           </button>
         </div>
 
