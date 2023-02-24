@@ -94,7 +94,7 @@ label {
 }
 
 .login-btn:hover, .login-btn:focus {
-    opacity: 0.7;
+    opacity: 0.9;
     cursor: pointer;
     box-shadow: 0 0 20px rgba(30, 26, 43, 0.575);
 }

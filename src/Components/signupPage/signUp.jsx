@@ -2,6 +2,7 @@ import './signUp.css'
 import  axios from 'axios'
 import {FaEyeSlash, FaEye, FaArrowRight} from 'react-icons/fa'
 import { BiInfoCircle } from 'react-icons/bi'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import illustration from '../illustrations/login-illustrate.svg'
@@ -30,25 +31,30 @@ function SignUpPage() {
         password: ''
     })
 
-    // const [token, setToken] = useState('')
+    const [loadingEff, setLoadingEff] = useState(false)
+    
     const [eyesOpen, setEyesOpen] = useState(false)
 
     // --------------- FUNCTIONS -----------------
 
-    // --- The Login function ---
+    // --- The SignUp function ---
     const signUp = async () => {
         console.log('started submitting')
+        setLoadingEff(true)
+
         try {
             const response = await axios.post('https://loop-social-server-side.vercel.app/api/auth/register', newUser)
             console.log(response.data)
             localStorage.setItem('token', JSON.stringify(response.data.token))
+            setLoadingEff(false)
 
         } catch (error) {
             console.log(error)
+            setLoadingEff(false)
         }
     }
 
-    // --- onchange function for filling the user info ---
+    // --- onchange function for filling the new user info ---
     const fillingData = (e) => {
         const {name, value} = e.target
         setNewUser(prevState => ({...prevState, [name]: value}))
@@ -150,7 +156,10 @@ function SignUpPage() {
                     onClick={() => signUp()}
                     disabled = {condition()}
                 > 
-                    Sign up 
+                    {loadingEff ? 
+                        <AiOutlineLoading3Quarters className='loading-effect'/> : 
+                        "Sign up" 
+                    }
                 </button>
             </div>
 

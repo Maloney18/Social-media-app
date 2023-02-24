@@ -1,6 +1,7 @@
 import "./loginPage.css";
 import axios from "axios";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,6 +25,8 @@ function LoginPage() {
     password: "",
   });
 
+  const [loadingEff, setLoadingEff] = useState(false)
+
   // const [token, setToken] = useState('')
   const [eyesOpen, setEyesOpen] = useState(false);
 
@@ -31,6 +34,7 @@ function LoginPage() {
 
   // --- The Login function ---
   const Login = async () => {
+    setLoadingEff(true)
     try {
       const response = await axios.post(
         "https://loop-social-server-side.vercel.app/api/auth/login",
@@ -38,8 +42,12 @@ function LoginPage() {
       );
       console.log(response.data);
       localStorage.setItem("token", JSON.stringify(response.data.token));
+      setLoadingEff(false)
+      navigate('/')
+
     } catch (error) {
       console.log(error);
+      setLoadingEff(false)
     }
   };
 
@@ -133,7 +141,10 @@ function LoginPage() {
                 : false
             }
           >
-            Login
+            {loadingEff ? 
+              <AiOutlineLoading3Quarters className='loading-effect'/> : 
+              "Login" 
+            }
           </button>
         </div>
 

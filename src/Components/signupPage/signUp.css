@@ -112,6 +112,20 @@ label {
     box-shadow: 0 0 20px #6b63ffcc;
 }
 
+/* sign up page and login page are sharing this style*/
+.loading-effect {
+    animation: identifier 1s ease infinite;
+}
+
+@keyframes identifier {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (min-width: 900px) {
     .signup-page {
         align-items: center;
