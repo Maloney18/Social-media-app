@@ -82,7 +82,7 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      {loadingDiv ? 
+      {loadingDiv ?   
         <div className="loading-div"> <AiOutlineLoading3Quarters className='loading-effect'/> </div>: 
         ''
       }
@@ -139,7 +139,7 @@ function LoginPage() {
                 </span>
               )}
 
-              <span className="forget-password">Forgot password?</span>
+              <span className="forget-password" onClick={() => navigate('/forget')}>Forgot password?</span>
             </div>
           </li>
         </ul>

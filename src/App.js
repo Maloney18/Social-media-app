@@ -1,6 +1,7 @@
 import './App.css';
-import LoginPage from './Components/loginpage/loginPage';
-import SignUpPage from './Components/signupPage/signUp';
+import LoginPage from './Components/pages/loginpage/loginPage';
+import SignUpPage from './Components/pages/signupPage/signUp';
+import ForgetPassword from './Components/pages/forget-password/forgetPassword';
 import { Routes, Route } from 'react-router-dom'
 import { MainContent } from './Components/user';
 import { NotFound } from './Components/pages';
@@ -47,6 +48,7 @@ function App() {
         <Route path='/' element={<MainContent />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/sign-up' element={<SignUpPage />} />
+        <Route path='/forget' element={<ForgetPassword />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </main>
