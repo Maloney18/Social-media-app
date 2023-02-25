@@ -26,8 +26,12 @@ function LoginPage() {
     password: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState({
+    bool: false,
+    message:''
+  })
+
   const [loadingDiv, setLoadingDiv] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(false)
 
   // const [token, setToken] = useState('')
   const [eyesOpen, setEyesOpen] = useState(false);
@@ -48,9 +52,8 @@ function LoginPage() {
       navigate('/')
 
     } catch (error) {
-      console.log(error);
+      error.message === 'Network Error' ? setErrorMessage({bool: true, message:'Network error'}) : setErrorMessage({bool: true, message:'invalid email or password'})
       setLoadingDiv(false)
-      setErrorMessage(true)
     }
   };
 
@@ -85,7 +88,7 @@ function LoginPage() {
       }
       <form className="login-form" onSubmit={(e) => e.preventDefault()}>
         <h2>Login</h2>
-        { errorMessage ? <div className="error"> <RiAlarmWarningFill/> invalid email or password</div> : ''}
+        { errorMessage.bool ? <div className="error"> <RiAlarmWarningFill/> {errorMessage.message}</div> : ''}
         <ul className="login-ul">
           <li>
             <label className="label" htmlFor="email">

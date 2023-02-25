@@ -3,6 +3,7 @@ import  axios from 'axios'
 import {FaEyeSlash, FaEye, FaArrowRight} from 'react-icons/fa'
 import { BiInfoCircle } from 'react-icons/bi'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { RiAlarmWarningFill } from 'react-icons/ri'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import illustration from '../illustrations/login-illustrate.svg'
@@ -31,6 +32,11 @@ function SignUpPage() {
         password: ''
     })
 
+    const [errorMessage, setErrorMessage] = useState({
+        bool: false,
+        message:''
+    })
+
     const [loadingDiv, setLoadingDiv] = useState(false)
     
     const [eyesOpen, setEyesOpen] = useState(false)
@@ -39,7 +45,6 @@ function SignUpPage() {
 
     // --- The SignUp function ---
     const signUp = async () => {
-        console.log('started submitting')
         setLoadingDiv(true)
 
         try {
@@ -49,7 +54,7 @@ function SignUpPage() {
             setLoadingDiv(false)
 
         } catch (error) {
-            console.log(error)
+            error.message === 'Network Error' ? setErrorMessage({bool: true, message:'Network error'}) : setErrorMessage({bool: true, message:'Email has been registered by another user'})
             setLoadingDiv(false)
         }
     }
@@ -85,6 +90,7 @@ function SignUpPage() {
             }
         <form className='signup-form' onSubmit={(e) => e.preventDefault()}>
             <h2>Sign Up</h2>
+            { errorMessage.bool ? <div className="error"> <RiAlarmWarningFill/> {errorMessage.message}</div> : ''}
             <ul className='signup-ul'>
                 <li>
                     <label className='label' htmlFor="username">Username</label>
