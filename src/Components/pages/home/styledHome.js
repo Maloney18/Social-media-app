@@ -14,16 +14,20 @@ export const StyledHome = styled.div`
       &:nth-of-type(2) {
         /* grid-column: span 2; */
         grid-area: 1;
-            @media screen and (min-width: 45rem) {
-              grid-area: unset;
-              grid-column: span 2;
-
-            }
-
+        
+        @media screen and (min-width: 45rem) {
+          grid-area: unset;
+          grid-column: span 2;
+          
+        }
+        @media screen and (max-width: 884px) {
+      grid-area: 1;
+    }
 
         .item {
           width: 100%;
           grid-column: span 2;
+          
 
           .inner-wrapper {
             display: flex;
