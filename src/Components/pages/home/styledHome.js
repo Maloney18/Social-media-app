@@ -14,7 +14,7 @@ export const StyledHome = styled.div`
       &:nth-of-type(2) {
         /* grid-column: span 2; */
         grid-area: 1;
-        
+
         @media screen and (min-width: 45rem) {
           grid-area: unset;
           grid-column: span 2;
@@ -28,10 +28,11 @@ export const StyledHome = styled.div`
           width: 100%;
           grid-column: span 2;
           
-
+          
           .inner-wrapper {
             display: flex;
-            width: 100%;
+            margin: 0 auto;  
+            max-width: 100%;
             &::-webkit-scrollbar {
               width: 0;
               height: 0;
@@ -41,12 +42,18 @@ export const StyledHome = styled.div`
             gap: 1rem;
             overflow-y: hidden;
             overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-snap-align: center;
+            
+            
           }
           &:nth-of-type(1) {
             position: relative;
-
+            
             .profile {
               width: fit-content;
+              transition: 1s ease;
+
 
               &:nth-of-type(1) {
                 position: relative;
@@ -62,9 +69,20 @@ export const StyledHome = styled.div`
                 border-radius: 50%;
                 overflow: hidden;
                 border: 2px solid var(--blueViolet);
+                cursor: pointer;
+
+
+                &:hover{
+                  img{
+                    transform: scale(1.1);
+                    transition: var(--transition);
+                  }
+                }
+
                 img {
                   width: 100%;
-                  height: 100%;
+                  /* height: 100%; */
+                  aspect-ratio: 1/1;
                   border-radius: 50%;
                   object-fit: cover;
                   border: 2px solid var(--color-white);
@@ -80,7 +98,111 @@ export const StyledHome = styled.div`
               }
             }
           }
-          &:nth-of-type(2) {
+          &:nth-of-type(2){
+            .profile {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: .5rem;
+              padding-bottom: 2rem;
+
+              .combine{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                /* padding-bottom: 2rem; */
+
+              }
+
+              .img_wrapper {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                /* border: 2px solid var(--blueViolet); */
+                img {
+                  width: 100%;
+                  /* height: 100%; */
+                  aspect-ratio: 1/1;
+
+                  border-radius: 50%;
+                  object-fit: cover;
+                  /* border: 2px solid var(--color-white); */
+                  object-position: center;
+                }
+              }
+.input_cont{
+  width: 100%;
+
+  input{
+    width: 100%;
+    background-color: var(--color-gray-lyt);
+      border: 1px inset var(--blueViolet);
+      outline: none;
+      transition: var(--transition);
+      font-size: 1rem;
+      border-radius: 2rem;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+      &::placeholder {
+        font-size: 1rem;
+      }
+}
+
+            }
+     .actions_cont{
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      justify-content: space-between;
+
+      .icons_cont{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+
+        gap: 1rem;
+
+        .icon_wrapper{
+          width: max-content;
+          display: flex;
+          align-items: center;
+
+          gap: 1rem;
+
+          .icon{
+            font-size: 1.3rem;
+          }
+          .desc{
+            font-size: 1rem;
+        text-transform: capitalize;
+
+
+          }
+        }
+      }
+
+      button{
+        width: max-content;
+        padding: .5rem 1rem;
+        white-space: nowrap;
+        background: var(--blueViolet);
+        border-radius: 1rem;
+        text-transform: capitalize;
+        color: var(--color-white);
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+     }       
+          }
+        }
+          &:nth-of-type(3) {
             position: relative;
 
             .profile {
@@ -99,12 +221,24 @@ export const StyledHome = styled.div`
               .img_wrapper {
                 width: 70px;
                 height: 70px;
+                cursor: pointer;
+
                 border-radius: 50%;
                 overflow: hidden;
+
+                &:hover{
+                  img{
+                    transform: scale(1.1);
+                    transition: var(--transition);
+
+                  }
+                }
                 /* border: 2px solid var(--blueViolet); */
                 img {
                   width: 100%;
-                  height: 100%;
+                  /* height: 100%; */
+                  aspect-ratio: 1/1;
+
                   border-radius: 50%;
                   object-fit: cover;
                   /* border: 2px solid var(--color-white); */
@@ -188,7 +322,7 @@ export const StyledHome = styled.div`
         /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
 
         .img_cont {
-          background-color: pink;
+          /* background-color: pink; */
 
           display: flex;
           width: max-content;
@@ -197,6 +331,7 @@ export const StyledHome = styled.div`
           .img-wrapper {
             width: 40px;
             height: 40px;
+            cursor: pointer;
             position: absolute;
             border-radius: 50%;
             overflow: hidden;

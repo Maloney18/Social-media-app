@@ -17,6 +17,7 @@ import {
 } from "../navbar/styledNavBar";
 import { Home } from "../../pages";
 import { FaUserFriends } from "react-icons/fa";
+import StartFromTop from "../../StartFromTop";
 
 const MainContent = () => {
   const inputRef = useRef(null);
@@ -33,6 +34,7 @@ const MainContent = () => {
 
   return (
     <>
+      <StartFromTop />
       <NavBar>
         <Header>
           <div className="brand-name">
@@ -75,10 +77,10 @@ const MainContent = () => {
               <LinkWrapper data-title="video" hide>
                 <BsCameraVideo className="icon" />
               </LinkWrapper>
-              <LinkWrapper data-title="friend request" hide>
+              {/* <LinkWrapper data-title="friend request" hide>
                 <span>5</span>
                 <FaUserFriends className="icon" />
-              </LinkWrapper>
+              </LinkWrapper> */}
               <LinkWrapper data-title="notification" hide>
                 <span>25</span>
                 <IoMdNotificationsOutline className="icon" />

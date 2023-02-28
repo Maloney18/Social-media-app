@@ -463,7 +463,7 @@ a{
 
  [data-title] {
     position: relative; 
-    cursor: default; 
+    // cursor: default; 
 }
 
 [data-title]::after {
