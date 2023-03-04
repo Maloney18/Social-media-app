@@ -12,7 +12,6 @@ export const StyledHome = styled.div`
         
       }
       &:nth-of-type(2) {
-        /* grid-column: span 2; */
         grid-area: 1;
 
         @media screen and (min-width: 45rem) {
@@ -27,76 +26,10 @@ export const StyledHome = styled.div`
         .item {
           width: 100%;
           grid-column: span 2;
-          
-          
-          .inner-wrapper {
-            display: flex;
-            margin: 0 auto;  
-            max-width: 100%;
-            &::-webkit-scrollbar {
-              width: 0;
-              height: 0;
-              background: var(--color-white);
-            }
 
-            gap: 1rem;
-            overflow-y: hidden;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-snap-align: center;
-            
-            
-          }
           &:nth-of-type(1) {
             position: relative;
-            
-            .profile {
-              width: fit-content;
-              transition: 1s ease;
 
-
-              &:nth-of-type(1) {
-                position: relative;
-                .img_wrapper {
-                  border: 1px solid var(--color-gray);
-                }
-              }
-              .img_wrapper {
-                margin: 0 auto;
-
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 2px solid var(--blueViolet);
-                cursor: pointer;
-
-
-                &:hover{
-                  img{
-                    transform: scale(1.1);
-                    transition: var(--transition);
-                  }
-                }
-
-                img {
-                  width: 100%;
-                  /* height: 100%; */
-                  aspect-ratio: 1/1;
-                  border-radius: 50%;
-                  object-fit: cover;
-                  border: 2px solid var(--color-white);
-                  object-position: center;
-                }
-              }
-
-              .text {
-                p {
-                  font-size: 0.8rem;
-                  width: 100%;
-                }
-              }
-            }
           }
           &:nth-of-type(2){
             .profile {
@@ -112,7 +45,6 @@ export const StyledHome = styled.div`
                 display: flex;
                 align-items: center;
                 gap: 2rem;
-                /* padding-bottom: 2rem; */
 
               }
 
@@ -122,15 +54,11 @@ export const StyledHome = styled.div`
                 border-radius: 50%;
                 overflow: hidden;
 
-                /* border: 2px solid var(--blueViolet); */
                 img {
                   width: 100%;
-                  /* height: 100%; */
                   aspect-ratio: 1/1;
-
                   border-radius: 50%;
                   object-fit: cover;
-                  /* border: 2px solid var(--color-white); */
                   object-position: center;
                 }
               }
@@ -159,20 +87,24 @@ export const StyledHome = styled.div`
 
       width: 100%;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.7rem;
 
       .icons_cont{
         width: fit-content;
         display: flex;
         align-items: center;
-
         gap: 1rem;
+        @media screen and (max-width: 280px) {
+          flex-wrap: wrap;   
+ }
 
         .icon_wrapper{
-          width: max-content;
+          width: 100%;
           display: flex;
           align-items: center;
+          gap: .5rem;
 
-          gap: 1rem;
 
           .icon{
             font-size: 1.3rem;
@@ -183,6 +115,8 @@ export const StyledHome = styled.div`
 
 
           }
+
+  
         }
       }
 
@@ -194,6 +128,7 @@ export const StyledHome = styled.div`
         border-radius: 1rem;
         text-transform: capitalize;
         color: var(--color-white);
+        margin-left: auto;
         border: none;
         cursor: pointer;
         font-size: 1rem;
@@ -238,6 +173,7 @@ export const StyledHome = styled.div`
                   width: 100%;
                   /* height: 100%; */
                   aspect-ratio: 1/1;
+
 
                   border-radius: 50%;
                   object-fit: cover;
@@ -308,6 +244,14 @@ export const StyledHome = styled.div`
         justify-content: space-between;
         width: fit-content;
         gap: 2rem;
+
+        &{
+          .icon:nth-of-type(1){
+          color: var(--blueViolet);
+          font-size: 1.5rem;
+
+          }
+        }
       }
     }
 
@@ -318,16 +262,12 @@ export const StyledHome = styled.div`
         width: fit-content;
         padding-bottom: 1rem;
 
-        /* align-items: center; */
-        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-
         .img_cont {
-          /* background-color: pink; */
-
           display: flex;
           width: max-content;
           align-items: center;
           position: relative;
+
           .img-wrapper {
             width: 40px;
             height: 40px;
@@ -341,7 +281,6 @@ export const StyledHome = styled.div`
               width: 100%;
               height: 100%;
               object-fit: cover;
-              /* border: 2px solid var(--color-white); */
               object-position: center;
             }
           }
@@ -359,9 +298,6 @@ export const StyledHome = styled.div`
           }
         }
 
-        /* .img-wrapper:nth-of-type(4){
-    transform: translateX(200%);
-    } */
 
         .text_cont {
           margin-left: 5rem;

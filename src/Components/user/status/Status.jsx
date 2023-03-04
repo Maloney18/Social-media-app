@@ -1,10 +1,11 @@
 import React from "react";
+import { StyledStatus } from "./styledStatus";
 
 const Status = ({ profiles }) => {
   // console.log(profiles.length);
   // console.log(currentSlide);
   return (
-    <>
+    <StyledStatus className="inner-wrapper">
       {profiles.map((profile) => (
         <div
           // style={{ transform: `translateX(${currentSlide * -100}%)` }}
@@ -20,7 +21,7 @@ const Status = ({ profiles }) => {
           {profile?.icon ? <span className="add">{profile?.icon}</span> : null}
         </div>
       ))}
-    </>
+    </StyledStatus>
   );
 };
 

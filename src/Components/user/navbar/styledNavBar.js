@@ -331,11 +331,13 @@ border: 1px solid var(--blueViolet);
     font-size: 1.5rem;
   }
 
+  
+  
   &:not(:first-of-type, :nth-of-type(4), :nth-of-type(5)){
     @media screen and (max-width: 884px) {
       display: none;
     }
-
+    
   }
 
   &:last-of-type {
@@ -371,9 +373,9 @@ border: 1px solid var(--blueViolet);
   &:nth-of-type(5) {
     display: flex;
 
-        /* @media screen and (max-width: 360px) {
+    @media screen and (max-width: 280px) {
       display: none;
-    } */
+    }
 
   }
 

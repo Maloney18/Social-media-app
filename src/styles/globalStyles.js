@@ -32,7 +32,7 @@ body {
 --color-white: #ffffff;
 --gray-and-black: linear-gradient( to top left, #181818,#cccccc, #000000 );
 --default-font: 'Inter', sans-serif;
-/* --default-font: 'Space Grotesk', sans-serif; */
+// --default-font: 'Space Grotesk', sans-serif; 
 --transition: all .5s ease-in-out;
 --default-font-size: 1rem;
 --blueViolet: blueviolet;
@@ -146,7 +146,6 @@ transition: var(--transition);
     width: max-content;
     border-radius: 2rem !important;
     padding: 0.9rem 1rem !important;
-    /* font-size: .7rem !important; */
     cursor: pointer;
     @media screen and (min-width: 64rem) {
         padding: 0.9rem 2.5rem !important;
@@ -176,7 +175,6 @@ h1, h2, h3{
     font-size: 2rem;
     text-align: center;
     line-height: 2.5rem;
-    /* width: 548px; */
     word-wrap: normal;
     @media screen and (min-width: 45rem) {
         line-height: 3.5rem;
@@ -192,7 +190,6 @@ p{
     text-align: center;
     width: 100%;
     word-wrap: normal;
-    /* font-weight: 500; */
     @media screen and (min-width: 45rem) {
         text-align: left;
     }
@@ -213,10 +210,6 @@ button{
 }
 .bold{
     font-weight: bold;
-
-}
-p{
-    /* font-weight: 500; */
 
 }
 .imageBox{
@@ -354,13 +347,15 @@ position: relative;
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
   width: 100%;
   align-items: start;
   place-items: center;
   @media screen and (min-width: 45rem) {
       place-items:start;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   }
 }
 

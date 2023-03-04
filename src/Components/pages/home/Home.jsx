@@ -7,7 +7,7 @@ import { BiShareAlt } from "react-icons/bi";
 import { BsCameraVideo } from "react-icons/bs";
 import { MdOutlineInsertPhoto } from "react-icons/md";
 import { VscReactions } from "react-icons/vsc";
-import { SlLike } from "react-icons/sl";
+import { AiFillLike } from "react-icons/ai";
 import Status from "../../user/status/Status";
 import { profiles } from "../../profile";
 
@@ -71,9 +71,7 @@ const Home = () => {
               >
                 &#10095;
               </span>
-              <div ref={sliderRef} className="inner-wrapper">
-                <Status profiles={profiles} />
-              </div>
+              <Status sliderRef={sliderRef} profiles={profiles} />
             </div>
             <div className="item">
               <div className="profile">
@@ -126,7 +124,7 @@ const Home = () => {
                 </div>
                 <div className="icons_wrapper">
                   <div className="left-icons">
-                    <SlLike className="icon" />
+                    <AiFillLike className="icon" />
                     <FaRegComment className="icon" />
                     <BiShareAlt className="icon" />
                   </div>
