@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const StyledHome = styled.div`
   .grid {
+
+    & > .item{
+      container-type: inline-size;
+    }
     .wrapper {
       width: 100%;
       height: fit-content;
@@ -76,7 +80,14 @@ export const StyledHome = styled.div`
       padding: 0.5rem 0.5rem 0.5rem 1rem;
 
       &::placeholder {
-        font-size: 1rem;
+        font-size: 5cqw;
+            
+            @media screen and (min-width: 64rem) {
+          font-size: 3cqw;
+
+
+
+          }        
       }
 }
 
@@ -110,12 +121,16 @@ export const StyledHome = styled.div`
             font-size: 1.3rem;
           }
           .desc{
-            font-size: 1rem;
-        text-transform: capitalize;
+            text-transform: capitalize;
+          font-size: 5cqw;
+            
+            @media screen and (min-width: 64rem) {
+          font-size: 3cqw;
+
 
 
           }
-
+        }
   
         }
       }

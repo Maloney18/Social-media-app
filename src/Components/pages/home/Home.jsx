@@ -44,6 +44,7 @@ const Home = () => {
     <StyledHome>
       <Section>
         <div className="grid">
+          {/*? left side-bar*/}
           <div className="wrapper grid">
             <div className="item"></div>
             <div className="item"></div>
@@ -160,6 +161,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          {/* ? right side-bar */}
           <div className="wrapper grid">
             <div className="item"></div>
             <div className="item"></div>

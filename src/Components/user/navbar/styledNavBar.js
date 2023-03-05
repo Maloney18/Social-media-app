@@ -23,6 +23,29 @@ export const Header = styled.header`
     }
 
     }
+
+    .brand-name {
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      p {
+        font-size: 1.8rem;
+        white-space: nowrap;
+        font-family: "Berkshire Swash", cursive;
+        width: 100%;
+
+
+      }
+      span{
+        .icon{
+          font-size: 1.8rem;
+margin-top: .5rem;
+          color: var(--blueViolet);
+        }
+      }
+    }
+  
   
 
   @media screen and (min-width: 45rem) {
@@ -45,7 +68,7 @@ export const MobileNavCont = styled(Header)`
     margin-right: 0;
     transition: var(--transition);
     p {
-      font-size: 1.3rem;
+      font-size: 1.3rem;    
     }
   }
   
@@ -196,17 +219,13 @@ transition: var(--transition);
 
   */
 
-  /* @media screen and (min-width: 64rem) { */
   width: fit-content;
   opacity: 1;
   height: unset;
   display: flex;
   flex-direction: row-reverse;
-  /* flex-wrap: wrap; */
   padding: 0;
-  /* margin-left: .5rem; */
   align-items: flex-end;
-  /* flex-direction: row; */
   justify-content: flex-end;
   gap: 1rem;
   pointer-events: all;
@@ -222,16 +241,6 @@ transition: var(--transition);
     flex-direction: row-reverse;
   }
   
-  /* }   */
-
-  /* ${({ noGap }) =>
-    noGap &&
-    css`
-      margin-right: 0;
-      @media screen and (min-width: 64rem) {
-        margin-right: 2rem;
-      }
-    `} */
 
   a {
     text-decoration: none;
@@ -303,7 +312,6 @@ border: 1px solid var(--blueViolet);
     top: 0;
     right: -10%;
     background: var(--color-gray);
-    /* text-shadow: 3px 5px 5px var(--color-gray-dark); */
     color: var(--blueViolet);
   }
 
@@ -341,20 +349,17 @@ border: 1px solid var(--blueViolet);
   }
 
   &:last-of-type {
+    width: 3rem;
+    height: 3rem;
 
     .cover{
       border-radius: 50%;
     }
-
-
-
-    width: 3rem;
-    height: 3rem;
+    
   }
   &:nth-of-type(1) {
     border-radius: 10%;
     display: flex;
-    /* margin-left: 5rem; */
     @media screen and (min-width: 45rem) {
       margin-left: unset;
     }
@@ -583,6 +588,8 @@ export const MenuBar = styled.div`
     position: absolute;
     background-color: var(--color-gray-dark);
     height: 2px;
+    transition: var(--transition);
+
   }
   &::before {
     width: 30%;
@@ -596,7 +603,6 @@ export const MenuBar = styled.div`
     background: var(--blueViolet);
   }
   div {
-    width: 100%;
     background-color: var(--color-gray-dark);
     height: 2px;
     width: 65%;
@@ -617,9 +623,9 @@ export const MenuBar = styled.div`
       position: absolute;
     }
   }
-  @media screen and (min-width: 64rem) {
+  /* @media screen and (min-width: 64rem) {
     display: flex;
-  }
+  } */
 `;
 
 export const Image = styled.img`
