@@ -36,13 +36,6 @@ export const StyledHome = styled.div`
 
           }
           &:nth-of-type(2){
-            .profile {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: .5rem;
-              padding-bottom: 2rem;
 
               .combine{
                 width: 100%;
@@ -150,7 +143,6 @@ export const StyledHome = styled.div`
       }
 
      }       
-          }
         }
           &:nth-of-type(3) {
             position: relative;

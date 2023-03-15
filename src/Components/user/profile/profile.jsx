@@ -1,16 +1,17 @@
+import { StyledProfile } from "./styledProfile";
 
-const profile = () => {
+const Profile = ({ img, icon, username }) => {
   return (
-    <div className="profile">
-        <div className="images-cont">
-          <div className="background-image"></div>
-          <div className="profile-info">
-            <div className="profile-image"></div>
-            <p className="profile-name"></p>
-          </div>
-        </div>
-    </div>
-  )
-}
+    <StyledProfile>
+      <div className="img_wrapper">
+        <img src={`Images/${img}`} alt="avater" />
+      </div>
+      <div className="text tac">
+        <p>{username}</p>
+      </div>
+      {icon ? <span className="add">{icon}</span> : null}
+    </StyledProfile>
+  );
+};
 
-export default profile
+export default Profile;
