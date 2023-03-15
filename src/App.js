@@ -1,10 +1,11 @@
 import './App.css';
 import LoginPage from './Components/pages/loginpage/loginPage';
 import SignUpPage from './Components/pages/signupPage/signUp';
-import ForgetPassword from './Components/pages/forget-password/forgetPassword';
+// import ForgetPassword from './Components/pages/forget-password/forgetPassword';
 import { Routes, Route } from 'react-router-dom'
 import { MainContent } from './Components/user';
 import { NotFound } from './Components/pages';
+import UserProfile from './Components/user/profile/userProfile';
 // import  axios from 'axios'
 // import { useEffect, useState } from 'react';
 
@@ -48,7 +49,7 @@ function App() {
         <Route path='/' element={<MainContent />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/sign-up' element={<SignUpPage />} />
-        <Route path='/forget' element={<ForgetPassword />} />
+        <Route path='/user-profile' element={<UserProfile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </main>
