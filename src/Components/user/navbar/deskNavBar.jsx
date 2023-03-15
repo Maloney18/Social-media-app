@@ -12,7 +12,7 @@ import {
   NavCont,
 } from "./styledNavBar";
 
-const DeskNavBar = ({ handleMenu }) => {
+const DeskNavBar = ({ handleMenu, Navigate }) => {
   const deskMenuRef = useRef(null);
 
   const handleDeskMenuBar = () => {
@@ -75,7 +75,11 @@ const DeskNavBar = ({ handleMenu }) => {
             </LinkWrapper>
             <LinkWrapper data-title="profile" hide>
               <div className="cover">
-                <img src={"Images/profile-pic.png"} alt="avater" />
+                <img
+                  src={"Images/profile-pic.png"}
+                  onClick={() => Navigate("/user-profile")}
+                  alt="avater"
+                />
               </div>
             </LinkWrapper>
           </LinkCont>

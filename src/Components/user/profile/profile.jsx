@@ -1,9 +1,12 @@
 import { StyledProfile } from "./styledProfile";
 
-const Profile = ({ img, icon, username }) => {
+const Profile = ({ img, icon, username, Navigate, profile }) => {
   return (
     <StyledProfile>
-      <div className="img_wrapper">
+      <div
+        onClick={profile ? () => Navigate("/user-profile") : null}
+        className="img_wrapper"
+      >
         <img src={`Images/${img}`} alt="avater" />
       </div>
       <div className="text tac">

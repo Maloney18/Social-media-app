@@ -15,6 +15,15 @@ export const StyledHome = styled.div`
         padding-top: 4rem;
         
       }
+      &:first-of-type, 
+      &:last-of-type {
+        display: none;
+        @media screen and (min-width: 45rem) {
+          display: flex;
+          flex-direction: column;
+
+        }
+      }
       &:nth-of-type(2) {
         grid-area: 1;
 

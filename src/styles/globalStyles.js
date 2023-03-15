@@ -289,6 +289,11 @@ margin: 0 auto;
   right: 1%;
   bottom:0;
 
+  &:hover{
+    color:var(--blueViolet);
+    background: var(--color-white);
+  }
+
  & >*{
 
   pointer-events: none;

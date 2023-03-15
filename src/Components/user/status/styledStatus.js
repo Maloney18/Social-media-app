@@ -19,6 +19,9 @@ export const StyledStatus = styled.div`
       scroll-snap-align: center;
       
       
+      .img_wrapper {
+        cursor: default;
+      }
 
 
 

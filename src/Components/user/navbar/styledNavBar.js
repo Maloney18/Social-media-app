@@ -665,7 +665,7 @@ visibility: hidden;
 overflow: hidden;
 /* transition: all 500ms ease; */
 pointer-events: none;
-transition: opacity 0.3s ease-in, transform 0.2s ease-in, height 500ms ease;
+transition: opacity 500ms ease-in, transform 500ms ease-in, height 500ms ease;
 
 
 ul{

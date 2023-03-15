@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Home } from "../../pages";
 import StartFromTop from "../../StartFromTop";
@@ -9,6 +10,7 @@ import NavBar from "../navbar/navBar";
 
 const MainContent = () => {
   const [open, setOpen] = useState(false);
+  const Navigate = useNavigate();
 
   const handleMenu = () => {
     setOpen((prev) => !prev);
@@ -18,9 +20,9 @@ const MainContent = () => {
     <>
       <StartFromTop />
       <NavBar>
-        <DeskNavBar handleMenu={handleMenu} />
-        <MobNavBar handleMenu={handleMenu} />
-        <DropDownMenu viewState={open ? "reveal" : ""} />
+        <DeskNavBar Navigate={Navigate} handleMenu={handleMenu} />
+        <MobNavBar Navigate={Navigate} handleMenu={handleMenu} />
+        <DropDownMenu Navigate={Navigate} viewState={open ? "reveal" : ""} />
       </NavBar>
       <Home />
     </>

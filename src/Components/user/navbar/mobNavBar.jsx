@@ -12,7 +12,7 @@ import {
   NavCont,
 } from "./styledNavBar";
 
-const MobNavBar = ({ handleMenu }) => {
+const MobNavBar = ({ handleMenu, Navigate }) => {
   const inputRef = useRef(null);
   const buttonRef = useRef(null);
   const brandRef = useRef(null);
@@ -82,7 +82,11 @@ const MobNavBar = ({ handleMenu }) => {
               <IoMdNotificationsOutline className="icon" />
             </LinkWrapper>
             <LinkWrapper hide>
-              <img src={"Images/profile-pic.png"} alt="facial identifier" />
+              <img
+                src={"Images/profile-pic.png"}
+                onClick={() => Navigate("/user-profile")}
+                alt="facial identifier"
+              />
             </LinkWrapper>
           </LinkCont>
         </NavCont>

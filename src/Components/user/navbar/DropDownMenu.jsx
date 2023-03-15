@@ -27,7 +27,7 @@ import { Switch } from "../../features";
 import Profile from "../profile/profile";
 import { Dropdown } from "./styledNavBar";
 
-const DropDownMenu = ({ viewState }) => {
+const DropDownMenu = ({ viewState, Navigate }) => {
   const [activeMenu, setActiveMenu] = useState("main");
   const [menuHeight, setMenuHeight] = useState(null);
 
@@ -88,7 +88,9 @@ const DropDownMenu = ({ viewState }) => {
           <ul>
             <DropDownItem
               title={"profile"}
-              img={<Profile img={"profile-pic.png"} />}
+              img={
+                <Profile profile Navigate={Navigate} img={"profile-pic.png"} />
+              }
             >
               My Profile
             </DropDownItem>
