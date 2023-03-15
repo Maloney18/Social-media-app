@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
 import './forgetPassword.css'
 
 const ForgetPassword = () => {
@@ -49,10 +50,10 @@ const ForgetPassword = () => {
                 <ul className='forget-ul'>
                    {    toggle ? 
                         <li className='forget-email-cont flex'>
-                            <div className='going-back'> <FaArrowLeft onClick={() => navigate('/login')}/> Back</div>
+                            <div> <span className='going-back' /*onClick={() => navigate('/login')}*/> <HiArrowNarrowLeft/> Back</span> </div>
 
                             <div className='forget-pass-cont flex'>
-                                <h2>Forgot password</h2>
+                                <h2>Forgot password ?</h2>
                                 <p className='forget-info'>Enter your registered email below to recieve password reset instructions</p>
                             </div>
 

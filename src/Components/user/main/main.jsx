@@ -5,6 +5,7 @@ import { CgAddR } from "react-icons/cg";
 import { BsCameraVideo } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaHandPointRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 // import { BiMessageDetail } from "react-icons/bi";
 
@@ -22,6 +23,7 @@ import { FaUserFriends } from "react-icons/fa";
 import StartFromTop from "../../StartFromTop";
 
 const MainContent = () => {
+  const navigate = useNavigate()
   const inputRef = useRef(null);
   const buttonRef = useRef(null);
   const brandRef = useRef(null);
@@ -106,7 +108,7 @@ const MainContent = () => {
                 <IoMdNotificationsOutline className="icon" />
               </LinkWrapper>
               <LinkWrapper hide>
-                <div className="cover">
+                <div className="cover" onClick={() => navigate('/user-profile')}>
                   <img src={"Images/profile-pic.png"} alt="facial identifier" />
                 </div>
               </LinkWrapper>
