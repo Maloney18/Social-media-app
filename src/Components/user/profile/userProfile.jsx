@@ -1,6 +1,8 @@
-import { IoMdSettings } from 'react-icons/io'
-import { FaGreaterThan } from 'react-icons/fa'
-import './userProfile.css'
+import { IoMdSettings } from 'react-icons/io';
+import { FaGreaterThan } from 'react-icons/fa';
+import './userProfile.css';
+import Lottie from 'lottie-react';
+import Empty from './empty-state.json'
 
 const UserProfile = () => {
   return (
@@ -53,7 +55,7 @@ const UserProfile = () => {
         <div className="photos flex-cont">
           <div className="photos-head">
             <p className="photos-label">Photos</p>
-            <FaGreaterThan />
+            <FaGreaterThan className='goTo'/>
           </div>
 
           <div className="photos-cont">
@@ -83,12 +85,16 @@ const UserProfile = () => {
         <div className="videos flex-cont">
           <div className="videos-head">
             <h2 className="videos-label">Videos</h2>
-            <FaGreaterThan />
+            <FaGreaterThan className='goTo'/>
           </div>
 
           <div className="videos-cont">
-            <div className="empty-cont">
-
+            <div className="empty-cont flex-cont">
+              <div className="empty-word flex-cont">
+                <p className='no-post'>No post(s) yet!</p>
+                <span className='click-add'>click here to add</span>
+              </div>
+              <Lottie className='empty' animationData={Empty} />
             </div>
           </div>
         </div>

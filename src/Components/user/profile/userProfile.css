@@ -23,14 +23,14 @@
     width: 70%;
     align-self: center;
     position: relative;
-    height: 16vh;
+    height: 110px;
     justify-content: flex-end;
     align-items: center;
 }
 
 .profile-image {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 2px solid white;
     position: absolute;
@@ -45,8 +45,12 @@
     object-position: center;
 }
 
+.profile-user {
+    line-height: 1.4;
+}
+
 .profile-name {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bolder;
 }
 
@@ -68,7 +72,7 @@
     text-align: center;
     background-color: rgba(128, 128, 128, 0.336);
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .button-settings {
@@ -115,17 +119,18 @@
 
 .rating-cont {
     align-items: center;
+    line-height: 1.09;
 }
 
 .figure {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bolder;
 }
 
-.photos, .videos {
+.photos {
     width: 90%;
     align-self: center;
-    gap: 15px;
+    justify-content: space-between;
     background-color: rgba(128, 128, 128, 0.082);
     height: 30vh;
     padding: 15px;
@@ -152,8 +157,6 @@
 .main-photo {
     height: 100%;
     width: 50%;
-    border-radius: 5px;
-    border: 1px solid;
 }
 
 .main-photo img {
@@ -161,6 +164,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 5px;
 }
 
 .other-photos {
@@ -205,3 +209,46 @@
     font-size: 20px;
 }
 
+.videos {
+    width: 90%;
+    align-self: center;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.082);
+    height: 40vh;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.videos-cont {
+    height: 80%;
+}
+
+.empty-cont {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.empty-word {
+    align-items: center;
+    line-height: 1.4;
+    font-weight: bolder;
+}
+
+.no-post {
+    font-size: 16px;
+    color: grey;
+}
+
+.click-add {
+    color: orangered;
+    font-size: 12px;
+}
+
+.empty {
+    height: 80%;
+}
+
+.click-add:hover, .int:hover, .edit-button button:hover, .settings:hover, .rating-cont:hover, .goTo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
