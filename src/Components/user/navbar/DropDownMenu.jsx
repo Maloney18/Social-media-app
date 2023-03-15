@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import {
   BiBlock,
   BiFingerprint,
+  BiHome,
   BiLogOut,
+  BiMessage,
   BiSelection,
   BiSupport,
 } from "react-icons/bi";
@@ -93,6 +95,12 @@ const DropDownMenu = ({ viewState, Navigate }) => {
               }
             >
               My Profile
+            </DropDownItem>
+            <DropDownItem title={"home"} leftIcon={<BiHome />}>
+              Home
+            </DropDownItem>
+            <DropDownItem title={"messages"} leftIcon={<BiMessage />}>
+              Messages
             </DropDownItem>
             <DropDownItem
               title={"settings"}

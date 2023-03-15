@@ -773,7 +773,7 @@ filter: brightness(1.2);
     }
 
   }
-  &[data-desc="profile"],&[data-desc="create post"],&[data-desc="video"]{
+  &[data-desc="profile"],&[data-desc="create post"],&[data-desc="video"],&[data-desc="messages"]{
     display: flex;
         @media screen and (min-width: 45rem) {
       display: none;
