@@ -1,25 +1,17 @@
 import React from "react";
+import Profile from "../profile/profile";
 import { StyledStatus } from "./styledStatus";
 
-const Status = ({ profiles }) => {
-  // console.log(profiles.length);
-  // console.log(currentSlide);
+const Status = ({ profiles, sliderRef }) => {
   return (
-    <StyledStatus className="inner-wrapper">
+    <StyledStatus ref={sliderRef}>
       {profiles.map((profile) => (
-        <div
-          // style={{ transform: `translateX(${currentSlide * -100}%)` }}
+        <Profile
           key={profile?.id}
-          className="profile"
-        >
-          <div className="img_wrapper">
-            <img src={`Images/${profile?.img}`} alt="avater" />
-          </div>
-          <div className="text tac">
-            <p>{profile?.usernanme}</p>
-          </div>
-          {profile?.icon ? <span className="add">{profile?.icon}</span> : null}
-        </div>
+          img={profile?.img}
+          icon={profile?.icon}
+          username={profile?.username}
+        />
       ))}
     </StyledStatus>
   );

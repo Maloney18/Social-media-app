@@ -1,21 +1,31 @@
 import styled, { css, keyframes } from "styled-components";
 
+
+export const StyledNavBar = styled.div`
+display: flex;
+align-items: center;
+width: 100%;
+height: 4.4rem;
+position: fixed;
+top: 0;
+transition: all 0.5s ease-in-out;
+z-index: 999;
+font-family: inherit;
+background-color: var(--primary-color);
+padding: 0.7rem;
+color: var(--color-gray-dark);
+
+`;
 export const Header = styled.header`
-  width: 100%;
-  height: 4.4rem;
+width: 100%;
+
   align-items: center;
-  display: flex;
-  padding: 0.7rem;
+  display: none;
   justify-content: center;
-  background-color: var(--primary-color);
-  color: var(--color-gray-dark);
-  position: fixed;
-  top: 0;
-  transition: all 0.5s ease-in-out;
-  z-index: 999;
-  font-family: inherit;
+  position: relative;
 
     @media screen and (min-width: 45rem) {
+      display: flex;
       margin-right: 2rem;
       transition: var(--transition);
     p {
@@ -29,6 +39,7 @@ export const Header = styled.header`
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
+      cursor: pointer;
       p {
         font-size: 1.8rem;
         white-space: nowrap;
@@ -51,9 +62,18 @@ margin-top: .5rem;
   @media screen and (min-width: 45rem) {
     padding: 0.7rem 4.4rem;
   }
+
+
+  
 `;
 
-export const MobileNavCont = styled(Header)`
+export const MobileNavCont = styled.div`
+width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
 
   @media screen and (min-width: 45rem) {
     display: none;
@@ -66,10 +86,26 @@ export const MobileNavCont = styled(Header)`
   
   .brand-name {
     margin-right: 0;
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      p {
+        font-size: 1.3rem;
+        white-space: nowrap;
+        font-family: "Berkshire Swash", cursive;
+        width: 100%;
+
+
+      }
+      span{
+        .icon{
+          font-size: 1.8rem;
+margin-top: .5rem;
+          color: var(--blueViolet);
+        }
+      }
     transition: var(--transition);
-    p {
-      font-size: 1.3rem;    
-    }
   }
   
 
@@ -198,27 +234,6 @@ export const NavCont = styled.nav`
   }
 `;
 export const LinkCont = styled.ul`
-  /* position: absolute;
-left: 0;
-right:0;
-bottom:0;
-background:var(--primary-color);
-/* background:pink; 
-top:100%;
-width: 100%;
-height: 100vh;
-display: flex;
-opacity:0;
-gap: 1rem;
-padding: 1.5rem 2rem 0;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
-pointer-events: none;
-transition: var(--transition);
-
-  */
-
   width: fit-content;
   opacity: 1;
   height: unset;
@@ -633,4 +648,183 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
+`;
+
+export const Dropdown = styled.div`
+  position: absolute;
+  top: 70px;
+  width: 300px;
+  right: 2%;
+background: var(--primary-color);
+box-shadow: 2px 5px 8px var(--blueViolet);
+border-radius: 1.5rem;
+transform: translateY(-100%);
+opacity: 0;
+z-index: -1;
+visibility: hidden;
+overflow: hidden;
+/* transition: all 500ms ease; */
+pointer-events: none;
+transition: opacity 500ms ease-in, transform 500ms ease-in, height 500ms ease;
+
+
+ul{
+  width: 100%;
+  padding: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  container-type: inline-size;
+background: var(--primary-color);
+
+
+  &::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.2rem;
+}
+
+}
+
+.heading{
+  /* font-size:1.5rem; */
+  white-space: nowrap;
+  margin: 0 0 0 1.5rem;
+  font-size: 8cqw;
+   @media screen and (min-width: 64rem) {
+          font-size: 8cqw;
+
+
+
+          }
+
+}
+
+.move_to_left{
+  margin: 0 0 0 .5rem;
+}
+
+.dropdown_menu_item{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  transition: background 500ms;
+  padding: 0.5rem;
+  margin-top: 10px;
+  text-transform: capitalize;
+  
+  :first-of-type{
+    margin-top: 0;
+    
+  }
+  
+  &:not(:has(p)):hover{
+    background: var(--color-gray-lyt);
+    cursor: pointer;
+  }
+
+  &:has(input):hover .right_icon {
+    filter: unset;
+  }
+  &:has(input) .right_icon {
+    background: unset;
+  }
+
+  .icon{
+    margin: 2px 5px 0;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: filter 300ms;
+background: var(--color-gray-lyt);
+
+&:hover {
+filter: brightness(1.2);
+  color: var(--blueViolet);
+
+}
+  }
+
+  .img_cont{
+    width: max-content;
+    margin: 2px 5px 0;
+
+
+    .img_wrapper {
+      width: calc( 70px * 0.7) ;
+      height: calc( 70px * 0.7) ;
+    }
+
+  }
+
+  .right_icon{
+    margin-left: auto;
+  }
+
+  &[data-desc='requests']{
+    display: none;
+        @media screen and (max-width: 360px) {
+      display: flex;
+    }
+
+  }
+  &[data-desc="profile"],&[data-desc="create post"],&[data-desc="video"],&[data-desc="messages"]{
+    display: flex;
+        @media screen and (min-width: 45rem) {
+      display: none;
+    }
+
+  }
+}
+
+.menu{
+  width: 100%;
+}
+
+.menu-primary-enter{
+
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+.menu-primary-enter-active{
+  transform: translateX(0%);
+  transition: all 500ms ease;
+}
+
+.menu-primary-exit{
+  position: absolute;
+}
+
+.menu-primary-exit-active{
+    transform: translateX(-100%);
+  transition: all 500ms ease;
+
+}
+.menu-secondary-enter{
+
+  position: absolute;
+  transform: translateX(100%);
+}
+
+.menu-secondary-enter-active{
+  transform: translateX(0%);
+  transition: all 500ms ease;
+}
+
+.menu-secondary-exit{
+  position: absolute;
+}
+
+.menu-secondary-exit-active{
+    transform: translateX(100%);
+  transition: all 500ms ease;
+
+}
+
 `;

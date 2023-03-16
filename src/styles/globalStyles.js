@@ -137,20 +137,20 @@ opacity:1 !important;
     transition: all 1s ease-in-out;
   }
   &::before {
-    width: 65%;
+    width: 65% !important;
     padding: 0.1rem;
     top: 20%;
   }
   &::after {
     bottom: 20%;
-    width: 65%;
+    width: 65% !important;
     padding: 0.12rem;
     background: var(--blueViolet);
   }
   div {
     background-color: var(--color-gray-dark);
     height: 2px;
-    width: 50%;
+    width: 50% !important;
     border-radius: 2rem 0 0 2rem;
     padding: 0.1rem;
     transition: all 1s ease-in-out;
@@ -252,7 +252,7 @@ button{
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  margin-top: -22px;
+  transform: translateY(-50%);
   color: var(--blueViolet);
   font-weight: bold;
   font-size: 15px;
@@ -288,6 +288,11 @@ margin: 0 auto;
   z-index: 10;
   right: 1%;
   bottom:0;
+
+  &:hover{
+    color:var(--blueViolet);
+    background: var(--color-white);
+  }
 
  & >*{
 
@@ -509,6 +514,14 @@ visibility: visible ;
 transform: translateY(0);
 
 } 
+
+.reveal{
+  opacity: 1 !important ;
+visibility: visible !important ;
+transform: translateY(0) !important;
+pointer-events: all !important;
+
+}
 
 /* [data-title] {
   position: relative;

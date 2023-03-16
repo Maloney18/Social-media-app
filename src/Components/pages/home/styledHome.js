@@ -15,6 +15,15 @@ export const StyledHome = styled.div`
         padding-top: 4rem;
         
       }
+      &:first-of-type, 
+      &:last-of-type {
+        display: none;
+        @media screen and (min-width: 45rem) {
+          display: flex;
+          flex-direction: column;
+
+        }
+      }
       &:nth-of-type(2) {
         grid-area: 1;
 
@@ -36,13 +45,6 @@ export const StyledHome = styled.div`
 
           }
           &:nth-of-type(2){
-            .profile {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: .5rem;
-              padding-bottom: 2rem;
 
               .combine{
                 width: 100%;
@@ -150,7 +152,6 @@ export const StyledHome = styled.div`
       }
 
      }       
-          }
         }
           &:nth-of-type(3) {
             position: relative;

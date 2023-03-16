@@ -1,2 +1,8 @@
 export { default as NavBar } from './navbar/navBar'
+export { default as DeskNavBar } from './navbar/deskNavBar'
+export { default as MobNavBar } from './navbar/mobNavBar'
 export { default as MainContent } from './main/main'
+export { default as PostField } from './postField/PostField'
+export { default as Post } from './post/Post'
+export { default as Status } from './status/Status'
+export { default as Profile } from './profile/profile'
