@@ -1,0 +1,84 @@
+.suggestions {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.upper-most {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.see-all {
+    color: grey;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.07 ease-in;
+}
+
+.see-all:hover {
+    color: rgb(26, 25, 25);
+}
+
+.all-suggestion {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.add-new {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.new-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.new-name {
+    flex: 2;
+}
+
+.new-name p {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.time {
+    color: grey;
+}
+
+.add-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    justify-content: center;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.07s ease-in;
+}
+
+.add-icon:hover {
+    opacity: 0.6;
+}

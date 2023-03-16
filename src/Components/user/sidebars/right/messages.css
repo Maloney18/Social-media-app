@@ -33,9 +33,9 @@
 .filter {
     position: absolute;
     right: 15px;
-    top: 9px;
-    font-size: 17px;
-    color: #1e1e1ec9;;
+    top: 6px;
+    font-size: 21px;
+    color: black;
 }
 
 .link-cont {
@@ -58,6 +58,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    overflow: scroll;
+    max-height: 246px;
 }
 
 .person {

@@ -17,7 +17,7 @@ const Home = () => {
     } else {
       slider.scrollBy(200, 0);
     }
-  };
+  };  
 
   return (
     <StyledHome>

@@ -1,4 +1,5 @@
-import { FaSearch, FaFilter, FaDotCircle } from 'react-icons/fa'
+import { FaSearch, FaDotCircle } from 'react-icons/fa'
+import { GoSettings } from 'react-icons/go'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './messages.css'
@@ -31,7 +32,7 @@ const Messages = () => {
                 />
 
                 <span className="filter">
-                    <FaFilter />
+                    <GoSettings />
                 </span>
             </div>
             
@@ -60,6 +61,60 @@ const Messages = () => {
                     </div>
                 </div>
 
+                <div className="person">
+                    <div className="image">
+                        <img src="Images/elon-musk.jpg" alt="" />
+                    </div>
+
+                    <div className="person-info">
+                        <div className="personal">
+                            <div className="name-container">
+                                <p className="person-name">Big Fame</p>
+                                <FaDotCircle className='online'/>
+                            </div>
+                            <p className="active"></p>
+                        </div>
+
+                        <p className="last-message"> This is your last message</p>
+                    </div>
+                </div>
+
+                <div className="person">
+                    <div className="image">
+                        <img src="Images/elon-musk.jpg" alt="" />
+                    </div>
+
+                    <div className="person-info">
+                        <div className="personal">
+                            <div className="name-container">
+                                <p className="person-name">Big Fame</p>
+                                <FaDotCircle className='online'/>
+                            </div>
+                            <p className="active"></p>
+                        </div>
+
+                        <p className="last-message"> This is your last message</p>
+                    </div>
+                </div>
+                
+                <div className="person">
+                    <div className="image">
+                        <img src="Images/elon-musk.jpg" alt="" />
+                    </div>
+
+                    <div className="person-info">
+                        <div className="personal">
+                            <div className="name-container">
+                                <p className="person-name">Big Fame</p>
+                                <FaDotCircle className='online'/>
+                            </div>
+                            <p className="active"></p>
+                        </div>
+
+                        <p className="last-message"> This is your last message</p>
+                    </div>
+                </div>
+                
                 <div className="person">
                     <div className="image">
                         <img src="Images/elon-musk.jpg" alt="" />
