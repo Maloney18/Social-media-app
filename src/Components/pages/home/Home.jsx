@@ -5,10 +5,6 @@ import { profiles } from "../../profile";
 import { Post, PostField, Status } from "../../user";
 import Right from "../../user/sidebars/right/right";
 import Left from "../../user/sidebars/left/left";
-=======
-<<<<<<< HEAD
-
->>>>>>> 5e7c1c4298ea3999933ab82feea0f023a30bb543
 
 const Home = () => {
   const sliderRef = useRef(null);
