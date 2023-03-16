@@ -252,7 +252,13 @@
     height: 80%;
 }
 
+.click-add, .int, .edit-button button, .settings, .rating-cont, .goTo {
+    cursor: pointer;
+    transition: all 0.05 ease-in;
+}
+
 .click-add:hover, .int:hover, .edit-button button:hover, .settings:hover, .rating-cont:hover, .goTo:hover {
     opacity: 0.6;
-    cursor: pointer;
 }
+
+/* the desktop-view sytles will be pushed later */

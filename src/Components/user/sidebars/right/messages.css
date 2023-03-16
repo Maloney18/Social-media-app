@@ -1,0 +1,101 @@
+.messages {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    color: #1e1e1ec9;
+    top: 7px;
+    font-size: 20px;
+}
+
+.search-bar input {
+    outline: none;
+    border: none;
+    background-color: #80808014;
+    height: 40px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 0 36px;
+    font-size: 15px;
+}
+
+.filter {
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    font-size: 17px;
+    color: #1e1e1ec9;;
+}
+
+.link-cont {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+    color: grey;
+    border-bottom: 1px solid;
+}
+
+.isActive {
+    color: black;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+.friends {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.person-info {
+    width: 70%;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.person-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.online {
+    color: #8a2be2;
+}

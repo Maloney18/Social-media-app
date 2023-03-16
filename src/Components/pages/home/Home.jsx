@@ -10,6 +10,8 @@ import { VscReactions } from "react-icons/vsc";
 import { AiFillLike } from "react-icons/ai";
 import Status from "../../user/status/Status";
 import { profiles } from "../../profile";
+import Right from "../../user/sidebars/right/right";
+import Left from "../../user/sidebars/left/left";
 
 const Home = () => {
   // const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,8 +48,7 @@ const Home = () => {
         <div className="grid">
           {/*? left side-bar*/}
           <div className="wrapper grid">
-            <div className="item"></div>
-            <div className="item"></div>
+            <Left />
           </div>
           <div className="wrapper grid">
             <div className="item">
@@ -163,8 +164,7 @@ const Home = () => {
           </div>
           {/* ? right side-bar */}
           <div className="wrapper grid">
-            <div className="item"></div>
-            <div className="item"></div>
+            <Right />
           </div>
         </div>
       </Section>
