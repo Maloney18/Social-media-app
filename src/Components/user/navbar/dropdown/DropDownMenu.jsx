@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {
   BiBlock,
   BiFingerprint,
-  BiHome,
   BiLogOut,
   BiMessage,
   BiSelection,
@@ -19,15 +18,16 @@ import {
   FaSms,
   FaUserFriends,
 } from "react-icons/fa";
+import { GoHome } from "react-icons/go";
 import {
   IoIosSwitch,
   IoMdCall,
   IoMdNotificationsOutline,
 } from "react-icons/io";
 import { CSSTransition } from "react-transition-group";
-import { Switch } from "../../features";
-import Profile from "../profile/profile";
-import { Dropdown } from "./styledNavBar";
+import { Switch } from "../../../features";
+import Profile from "../../profile/profile";
+import { Dropdown } from "./styledDropdown";
 
 const DropDownMenu = ({ viewState, Navigate }) => {
   const [activeMenu, setActiveMenu] = useState("main");
@@ -55,13 +55,18 @@ const DropDownMenu = ({ viewState, Navigate }) => {
   function DropDownItem(props) {
     return (
       <>
-        <li
-          data-desc={props.title}
-          className="dropdown_menu_item"
-          onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
-        >
+        <li data-desc={props.title} className="dropdown_menu_item">
           {props.leftIcon && (
-            <span className="left_icon icon">{props.leftIcon}</span>
+            <span
+              onClick={
+                props?.goLeft
+                  ? () => props.goToMenu && setActiveMenu(props.goToMenu)
+                  : null
+              }
+              className="left_icon icon"
+            >
+              {props.leftIcon}
+            </span>
           )}
           {props.img && <span className="img_cont">{props.img}</span>}
           {props.heading && (
@@ -71,7 +76,16 @@ const DropDownMenu = ({ viewState, Navigate }) => {
           )}
           {props.children}
           {props.rightIcon && (
-            <span className="right_icon icon">{props.rightIcon}</span>
+            <span
+              onClick={
+                props?.goRight
+                  ? () => props.goToMenu && setActiveMenu(props.goToMenu)
+                  : null
+              }
+              className="right_icon icon"
+            >
+              {props.rightIcon}
+            </span>
           )}
         </li>
       </>
@@ -96,7 +110,7 @@ const DropDownMenu = ({ viewState, Navigate }) => {
             >
               My Profile
             </DropDownItem>
-            <DropDownItem title={"home"} leftIcon={<BiHome />}>
+            <DropDownItem title={"home"} leftIcon={<GoHome />}>
               Home
             </DropDownItem>
             <DropDownItem title={"messages"} leftIcon={<BiMessage />}>
@@ -105,6 +119,7 @@ const DropDownMenu = ({ viewState, Navigate }) => {
             <DropDownItem
               title={"settings"}
               leftIcon={<FaCog />}
+              goRight
               rightIcon={<FaChevronRight />}
               goToMenu="settings"
             >
@@ -139,15 +154,21 @@ const DropDownMenu = ({ viewState, Navigate }) => {
           <ul>
             <DropDownItem
               leftIcon={<FaChevronLeft />}
+              goLeft
               heading={"Settings"}
               goToMenu="main"
             />
-            <DropDownItem leftIcon={<BiBlock />} rightIcon={<FaChevronRight />}>
+            <DropDownItem
+              leftIcon={<BiBlock />}
+              rightIcon={<FaChevronRight />}
+              goRight
+            >
               Blocked Accounts
             </DropDownItem>
             <DropDownItem
               leftIcon={<IoMdNotificationsOutline />}
               rightIcon={<FaChevronRight />}
+              goRight
               goToMenu="notifications"
             >
               Notifications
@@ -155,24 +176,28 @@ const DropDownMenu = ({ viewState, Navigate }) => {
             <DropDownItem
               leftIcon={<BsShieldExclamation />}
               rightIcon={<FaChevronRight />}
+              goRight
             >
               Privacy Policy
             </DropDownItem>
             <DropDownItem
               leftIcon={<FaBusinessTime />}
               rightIcon={<FaChevronRight />}
+              goRight
             >
               Terms of Service
             </DropDownItem>
             <DropDownItem
               leftIcon={<FaGuilded />}
               rightIcon={<FaChevronRight />}
+              goRight
             >
               Community Guidelines
             </DropDownItem>
             <DropDownItem
               leftIcon={<BiSupport />}
               rightIcon={<FaChevronRight />}
+              goRight
             >
               Support
             </DropDownItem>
@@ -191,6 +216,7 @@ const DropDownMenu = ({ viewState, Navigate }) => {
           <ul>
             <DropDownItem
               leftIcon={<FaChevronLeft />}
+              goLeft
               heading={"Notifications"}
               goToMenu="settings"
             />
@@ -200,6 +226,7 @@ const DropDownMenu = ({ viewState, Navigate }) => {
             <DropDownItem
               leftIcon={<IoIosSwitch />}
               rightIcon={<FaChevronRight />}
+              goRight
             >
               manage notifications
             </DropDownItem>

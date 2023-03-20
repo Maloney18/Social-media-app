@@ -4,13 +4,8 @@ import { BsCameraVideo } from "react-icons/bs";
 import { CgAddR } from "react-icons/cg";
 import { FaHandPointRight, FaUserFriends } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import {
-  LinkCont,
-  LinkWrapper,
-  MenuBar,
-  MobileNavCont,
-  NavCont,
-} from "./styledNavBar";
+import { LinkCont, LinkWrapper, MenuBar, NavCont } from "../styledNavBar";
+import { MobileNavCont } from "./styledMobile";
 
 const MobNavBar = ({ handleMenu, Navigate }) => {
   const inputRef = useRef(null);
@@ -58,7 +53,7 @@ const MobNavBar = ({ handleMenu, Navigate }) => {
               type="text"
             />
           </div>
-          <LinkCont className="open">
+          <LinkCont>
             <LinkWrapper data-title="menu">
               <div onClick={handleMobMenuBar} className="cover">
                 <MenuBar onClick={handleMenu} ref={mobMenuRef}>

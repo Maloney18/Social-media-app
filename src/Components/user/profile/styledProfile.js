@@ -19,6 +19,7 @@ export const StyledProfile = styled.div`
                 height: 70px;
                 border-radius: 50%;
                 overflow: hidden;
+                background: var(--primary-color);
                 border: 2px solid var(--blueViolet);
                 cursor: pointer;
 

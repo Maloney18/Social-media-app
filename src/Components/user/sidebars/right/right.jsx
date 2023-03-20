@@ -1,14 +1,14 @@
-import Messages from "./messages"
-import Suggestions from './suggestions'
-import './right.css'
+import Messages from "./messages";
+import Suggestions from "./suggestions";
+import "./right.css";
 
 const Right = () => {
   return (
-    <div className="right"> 
+    <aside className="right">
       <Messages />
       <Suggestions />
-    </div>
-  )
-}
+    </aside>
+  );
+};
 
 export default Right;

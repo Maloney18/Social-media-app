@@ -2,9 +2,7 @@
 // no vex
 
 const Left = () => {
-  return (
-    <div></div>
-  )
-}
+  return <aside></aside>;
+};
 
-export default Left
+export default Left;

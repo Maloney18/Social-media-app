@@ -84,7 +84,6 @@ font-size:var(--default-font-size);
 
 
 
-
  .fdirc{
     flex-direction: column;
 } 
@@ -109,11 +108,6 @@ justify-content: center;
 text-align: center;
 }
 
-.open{
-    pointer-events: all !important;
-opacity:1 !important;
-
-}
 
 .hamburger{
   display: flex;
@@ -134,18 +128,22 @@ opacity:1 !important;
     position: absolute;
     background-color: var(--color-gray-dark);
     height: 2px;
-    transition: all 1s ease-in-out;
+    transition: width 1s ease-in-out;
   }
   &::before {
     width: 65% !important;
     padding: 0.1rem;
     top: 20%;
+    transition: width .5s ease-in-out;
+
   }
   &::after {
     bottom: 20%;
     width: 65% !important;
     padding: 0.12rem;
     background: var(--blueViolet);
+    transition: width .5s ease-in-out;
+
   }
   div {
     background-color: var(--color-gray-dark);
@@ -153,7 +151,7 @@ opacity:1 !important;
     width: 50% !important;
     border-radius: 2rem 0 0 2rem;
     padding: 0.1rem;
-    transition: all 1s ease-in-out;
+    transition: width .5s ease-in-out;
   }
 
 }
@@ -257,7 +255,8 @@ button{
   font-weight: bold;
   font-size: 15px;
   transition: 0.6s ease;
-  background: var(--color-gray);
+  background: var(--primary-color);
+  box-shadow: 2px 2px 5px var(--color-gray-dark);
   user-select: none;
   z-index: 10;
 
@@ -319,8 +318,8 @@ margin: 0 auto;
 }
 
 .prev:hover, .next:hover {
-  background: var(--blueViolet) !important;
-  color:var(--color-white) !important;
+  background: var(--blueViolet) ;
+  color:var(--color-white) ;
   
 }
 
@@ -376,11 +375,34 @@ position: relative;
   width: 100%;
   align-items: start;
   place-items: center;
+
+
   @media screen and (min-width: 45rem) {
       place-items:start;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   }
+}
+
+.hero{
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+  align-items: start;
+  place-items: center;
+  
+  @media screen and (min-width: 64rem) {
+    grid-template-columns: 24% 20% 20% 24%;
+  }
+  @media screen and (min-width: 65rem) {
+    grid-template-columns: 22% 20% 20% 22%;
+  }
+  /* @media screen and (max-width: 64rem) {
+    grid-template-columns: 24% 20% 20% 24%;
+  } */
+
 }
 
 .lists{
@@ -407,8 +429,8 @@ width: 100%;
     font-size: 2rem;
     text-align: center;
     line-height: 2.5rem;
-    /* width: 548px; */
     word-wrap: normal;
+
     @media screen and (min-width: 45rem) {
         line-height: 3.5rem;
     font-size: 2.8rem;
@@ -437,6 +459,7 @@ width: 100%;
 }
 .span-2{
     grid-column: span 1;
+
     @media screen and (min-width: 45rem) {
         grid-column: span 2;
     }
@@ -447,7 +470,7 @@ width: 100%;
 width: fit-content;
 margin-right: auto;
 margin-left: 0;
-background-color: pink;
+
 @media screen and (min-width: 45rem) {
     margin-left: -53px;
     width: fit-content;
@@ -482,7 +505,6 @@ a{
 
  [data-title] {
     position: relative; 
-    // cursor: default; 
 }
 
 [data-title]::after {

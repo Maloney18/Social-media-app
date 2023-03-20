@@ -4,13 +4,8 @@ import { BsCameraVideo } from "react-icons/bs";
 import { CgAddR } from "react-icons/cg";
 import { FaHandPointRight } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import {
-  Header,
-  LinkCont,
-  LinkWrapper,
-  MenuBar,
-  NavCont,
-} from "./styledNavBar";
+import { LinkCont, LinkWrapper, MenuBar, NavCont } from "../styledNavBar";
+import { Header } from "./styledDeskNav";
 
 const DeskNavBar = ({ handleMenu, Navigate }) => {
   const deskMenuRef = useRef(null);
@@ -43,7 +38,7 @@ const DeskNavBar = ({ handleMenu, Navigate }) => {
               placeholder="search for creators, inspiration and projects..."
             />
           </div>
-          <LinkCont className="">
+          <LinkCont>
             <LinkWrapper data-title="menu">
               {/* <span
                   data-tooltip="menu"

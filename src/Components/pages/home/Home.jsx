@@ -17,17 +17,16 @@ const Home = () => {
     } else {
       slider.scrollBy(200, 0);
     }
-  };  
+  };
 
   return (
     <StyledHome>
       <Section>
-        <div className="grid">
-          {/*? left side-bar*/}
+        <div className="hero">
           <div className="wrapper grid">
             <Left />
           </div>
-          <div className="wrapper grid">
+          <div className="wrapper grid ">
             <div className="item">
               <span onClick={() => slideFunc("left")} className="prev">
                 &#10094;
@@ -44,7 +43,6 @@ const Home = () => {
               <Post />
             </div>
           </div>
-          {/* ? right side-bar */}
           <div className="wrapper grid">
             <Right />
           </div>

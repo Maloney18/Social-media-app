@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 import { Home } from "../../pages";
 import StartFromTop from "../../StartFromTop";
-import DeskNavBar from "../navbar/deskNavBar";
-import DropDownMenu from "../navbar/DropDownMenu";
-import MobNavBar from "../navbar/mobNavBar";
+import DeskNavBar from "../navbar/desktop/deskNavBar";
+import DropDownMenu from "../navbar/dropdown/DropDownMenu";
+import MobNavBar from "../navbar/mobile/mobNavBar";
 import NavBar from "../navbar/navBar";
 
 const MainContent = () => {
