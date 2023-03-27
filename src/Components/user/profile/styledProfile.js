@@ -21,7 +21,7 @@ export const StyledProfile = styled.div`
                 overflow: hidden;
                 background: var(--primary-color);
                 border: 2px solid var(--blueViolet);
-                cursor: pointer;
+                cursor: default;
 
 
                 &:hover{
@@ -39,6 +39,7 @@ export const StyledProfile = styled.div`
                   object-fit: cover;
                   border: 2px solid var(--color-white);
                   object-position: center;
+                  
                 }
               }
 
@@ -46,6 +47,9 @@ export const StyledProfile = styled.div`
                 p {
                   font-size: 0.8rem;
                   width: 100%;
+                  font-weight: bold;
+                  /* color: var(--blueViolet); */
+                  /* text-shadow: 2px 2px 3px var(--primary-color); */
                 }
               }
 `;

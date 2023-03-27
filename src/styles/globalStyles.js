@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-*,*::before,*::after{
+*,*::before,*::after, html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,32 +12,23 @@ export const GlobalStyles = createGlobalStyle`
 
 }
 
-
-html, body, #root, .App {
-    height: 100%;
-}
-
-body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialised;
-}
-
 :root {
 --primary-color: #ffff;
 /* --primary-color: #000000; */
 --color-gray: #cccccc;
 --color-gray-lyt: #eeeeee;
+--dim-gray: rgb(94, 92, 92);
 --aliceblue: #eff4ff;
 --color-gray-dark: #181818;
 --color-white: #ffffff;
---gray-and-black: linear-gradient( to top left, #181818,#cccccc, #000000 );
+--gray-and-black: linear-gradient( to bottom left, var(--color-gray-lyt),var(--color-gray), var(--blueViolet-lyt) );
 --default-font: 'Inter', sans-serif;
 // --default-font: 'Space Grotesk', sans-serif; 
 --transition: all .5s ease-in-out;
 --default-font-size: 1rem;
 --blueViolet: blueviolet;
+--blueViolet-lyt: rgba(137, 43, 226, 0.514);
 }
-
 
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -62,15 +53,48 @@ body {
   border-bottom-right-radius: 0;
 }  
 
-body{
-font-family: var(--default-font);
-background: var(--color-gray-lyt);
+
+
+
+body {
+    -webkit-font-smoothing: antialised;
+    font-family: var(--default-font);
+background: var(--gray-and-black);
+background-color: var(--color-gray-lyt);
 font-size:var(--default-font-size);
-/* @media screen and (min-width: 45rem) {
-}  
-    @media screen and (min-width: 64rem) {
-    } */
+background-position: center;
+background-size:cover;
+background-repeat:no-repeat;
+
+/* &::before,&::after{
+  content: "";
+  position:absolute;
+  inset: 0;
+  
+} */
+/* &::after{
+  z-index: -2;
+  background-image: linear-gradient(30deg , var(--color-gray) 12%, transparent 12.5%, transparent 87%, var(--color-gray) 87.5%, var(--color-gray)),
+  linear-gradient(150deg , var(--color-gray) 12%, transparent 12.5%, transparent 87%, var(--color-gray) 87.5%, var(--color-gray)),
+   linear-gradient(30deg , var(--color-gray) 12%, transparent 12.5%, transparent 87%, var(--color-gray) 87.5%, var(--color-gray)),
+   linear-gradient(150deg , var(--color-gray) 12%, transparent 12.5%, transparent 87%, var(--color-gray) 87.5%, var(--color-gray)),
+   linear-gradient(60deg , var(--dim-gray) 25%, transparent 25.5%, transparent 75%, var(--dim-gray) 75%, var(--dim-gray)),
+   linear-gradient(60deg , var(--dim-gray) 25%, transparent 25.5%, transparent 75%, var(--dim-gray) 75%, var(--dim-gray));
+   background-size: 20px 80px;
+   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+   opacity: 0.5;
+   /* background-blend-mode: multiply; 
+  }
+  
+  &::before{
+    z-index: -1; 
+    background-color: rgba(137, 43, 226, 0.514);
+}*/
+
 }
+
+
+
 
 .df{
     display: flex;
@@ -192,6 +216,8 @@ h1, h2, h3{
     font-size: 2rem;
     text-align: center;
     line-height: 2.5rem;
+    /* color:var(--color-gray-dark); */
+
     word-wrap: normal;
     @media screen and (min-width: 45rem) {
         line-height: 3.5rem;
@@ -207,6 +233,8 @@ p{
     text-align: center;
     width: 100%;
     word-wrap: normal;
+    /* color:var(--color-gray-dark); */
+
     @media screen and (min-width: 45rem) {
         text-align: left;
     }
@@ -243,7 +271,7 @@ button{
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,26 +412,13 @@ position: relative;
   }
 }
 
-.hero{
+/*.hero{
 
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  width: 100%;
-  align-items: start;
-  place-items: center;
-  
-  @media screen and (min-width: 64rem) {
-    grid-template-columns: 24% 20% 20% 24%;
-  }
-  @media screen and (min-width: 65rem) {
-    grid-template-columns: 22% 20% 20% 22%;
-  }
   /* @media screen and (max-width: 64rem) {
     grid-template-columns: 24% 20% 20% 24%;
-  } */
+  } 
 
-}
+}*/
 
 .lists{
 width: 100%;

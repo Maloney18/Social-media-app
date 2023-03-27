@@ -22,30 +22,28 @@ const Home = () => {
   return (
     <StyledHome>
       <Section>
-        <div className="hero">
-          <div className="wrapper grid">
-            <Left />
+        <div className="wrapper grid">
+          <Left />
+        </div>
+        <div className="wrapper grid ">
+          <div className="item">
+            <span onClick={() => slideFunc("left")} className="prev">
+              &#10094;
+            </span>
+            <span onClick={() => slideFunc("right")} className="next">
+              &#10095;
+            </span>
+            <Status sliderRef={sliderRef} profiles={profiles} />
           </div>
-          <div className="wrapper grid ">
-            <div className="item">
-              <span onClick={() => slideFunc("left")} className="prev">
-                &#10094;
-              </span>
-              <span onClick={() => slideFunc("right")} className="next">
-                &#10095;
-              </span>
-              <Status sliderRef={sliderRef} profiles={profiles} />
-            </div>
-            <div className="item">
-              <PostField />
-            </div>
-            <div className="item">
-              <Post />
-            </div>
+          <div className="item">
+            <PostField />
           </div>
-          <div className="wrapper grid">
-            <Right />
+          <div className="item">
+            <Post />
           </div>
+        </div>
+        <div className="wrapper grid">
+          <Right />
         </div>
       </Section>
     </StyledHome>

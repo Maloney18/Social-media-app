@@ -1,7 +1,26 @@
 import styled from "styled-components";
 
 export const StyledHome = styled.div`
-  .hero {
+  & > section {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+ align-items: start;
+  place-items: center;
+  padding-top: 8rem;
+
+  
+  @media screen and (min-width: 64rem) {
+    grid-template-columns: 24% 20% 20% 24%;
+    height: 100vh;
+
+  }
+  @media screen and (min-width: 65rem) {
+    grid-template-columns: 22% 20% 20% 22%;
+  }
+
     & > .item{
       max-width: 40rem;
       margin: 0 auto;
@@ -9,11 +28,10 @@ export const StyledHome = styled.div`
 
     .wrapper {
       width: 100%;
-      height: 100vh;
-      padding-block: 6rem;
+      height: 100%;
+      /* padding-block: 6rem; */
       
       @media screen and (min-width: 45rem) {
-        padding-block: 4rem;
         overflow-x: hidden;
         overflow-y: auto;
         ::-webkit-scrollbar {
@@ -26,6 +44,7 @@ export const StyledHome = styled.div`
         display: none;
         @media screen and (min-width: 64rem) {
           display: grid;
+          /* margin-top: 4rem; */
           grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
           .item {
@@ -49,11 +68,12 @@ export const StyledHome = styled.div`
           width: 100%;
           grid-column: span 2;
 
+
           &:nth-of-type(1) {
             position: relative;
             max-width: 38rem;
             margin: 0 auto;
-            background: transparent;
+            /* background: transparent; */
 
           }
           &:nth-of-type(2){
@@ -146,6 +166,7 @@ export const StyledHome = styled.div`
           }
           .desc{
             text-transform: capitalize;
+
           font-size: 4cqw;
             
             @media screen and (min-width: 64rem) {
@@ -217,6 +238,7 @@ export const StyledHome = styled.div`
                   width: 100%;
                   font-weight: bold;
                   opacity: 0.6;
+                  /* color:var(--color-gray-dark); */
                   text-transform: capitalize;
                   font-size: 0.8rem;
                   &:nth-of-type(1) {
@@ -237,6 +259,8 @@ export const StyledHome = styled.div`
         width: 100%;
         border-radius: 1rem;
         background: var(--color-white);
+      box-shadow: 2px 3px 5px var(--blueViolet);
+
         .icon {
           cursor: pointer;
           font-size: 1.4rem;
@@ -328,6 +352,8 @@ export const StyledHome = styled.div`
 
         .text_cont {
           margin-left: 5rem;
+          color:var(--color-gray-dark);
+
         }
       }
     }

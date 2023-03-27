@@ -4,7 +4,7 @@ export const NavBtn = styled.button`
 border: none;
 padding: 1rem 2rem;
 width: max-content;
-background-color: var(--primary-color);
+background-color: var(--dim-gray);
 color: var(--color-white);
 border-radius: 1rem;
 white-space: nowrap;
@@ -15,12 +15,12 @@ text-align: center;
 font-size: var(--default-font-size);
 transition: var(--transition);
 &:hover{
-    color: var(--primary-color);
+    color: var(--dim-gray);
     background-color: var(--color-white);
 
     &:hover{
 a{
-    color: var(--primary-color);
+    color: var(--dim-gray);
 
 }
 

@@ -1,8 +1,8 @@
 import "./loginPage.css";
 import axios from "axios";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
-import { RiAlarmWarningFill } from 'react-icons/ri'
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { RiAlarmWarningFill } from "react-icons/ri";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -28,19 +28,19 @@ function LoginPage() {
 
   const [errorMessage, setErrorMessage] = useState({
     bool: false,
-    message:''
-  })
+    message: "",
+  });
 
-  const [loadingDiv, setLoadingDiv] = useState(false)
+  const [loadingDiv, setLoadingDiv] = useState(false);
 
   // const [token, setToken] = useState('')
   const [eyesOpen, setEyesOpen] = useState(false);
 
   // --------------- FUNCTIONS -----------------
 
-  // --- The Login function --- 
+  // --- The Login function ---
   const Login = async () => {
-    setLoadingDiv(true)
+    setLoadingDiv(true);
     try {
       const response = await axios.post(
         "https://loop-social-server-side.vercel.app/api/auth/login",
@@ -48,12 +48,13 @@ function LoginPage() {
       );
       console.log(response.data);
       localStorage.setItem("token", JSON.stringify(response.data.token));
-      setLoadingDiv(false)
-      navigate('/')
-
+      setLoadingDiv(false);
+      navigate("/");
     } catch (error) {
-      error.message === 'Network Error' ? setErrorMessage({bool: true, message:'Network error'}) : setErrorMessage({bool: true, message:'invalid email or password'})
-      setLoadingDiv(false)
+      error.message === "Network Error"
+        ? setErrorMessage({ bool: true, message: "Network error" })
+        : setErrorMessage({ bool: true, message: "invalid email or password" });
+      setLoadingDiv(false);
     }
   };
 
@@ -82,13 +83,22 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      {loadingDiv ?   
-        <div className="loading-div"> <AiOutlineLoading3Quarters className='loading-effect'/> </div>: 
-        ''
-      }
+      {loadingDiv ? (
+        <div className="loading-div">
+          <AiOutlineLoading3Quarters className="loading-effect" />
+        </div>
+      ) : (
+        ""
+      )}
       <form className="login-form" onSubmit={(e) => e.preventDefault()}>
         <h2>Login</h2>
-        { errorMessage.bool ? <div className="error"> <RiAlarmWarningFill/> {errorMessage.message}</div> : ''}
+        {errorMessage.bool ? (
+          <div className="error">
+            <RiAlarmWarningFill /> {errorMessage.message}
+          </div>
+        ) : (
+          ""
+        )}
         <ul className="login-ul">
           <li>
             <label className="label" htmlFor="email">
@@ -139,7 +149,12 @@ function LoginPage() {
                 </span>
               )}
 
-              <span className="forget-password" onClick={() => navigate('/forget')}>Forgot password?</span>
+              <span
+                className="forget-password"
+                onClick={() => navigate("/forget")}
+              >
+                Forgot password?
+              </span>
             </div>
           </li>
         </ul>
@@ -159,7 +174,7 @@ function LoginPage() {
         </div>
 
         <p className="nav-to-signUp">
-          You don't have an account yet?{" "}
+          You don't have an account yet?
           <span onClick={() => navigate("/sign-up")} className="sign-word">
             Sign up
           </span>

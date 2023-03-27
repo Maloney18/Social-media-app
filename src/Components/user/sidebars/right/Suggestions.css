@@ -53,20 +53,12 @@
     align-items: center;
     gap: 10px;
 }
-
-.new-image {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+.add-new .img_wrapper {
+    width: 50px !important;
+    height: 50px !important;
+    background-color: grey;
 }
 
-.new-image img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
 
 .new-name {
     flex: 2;

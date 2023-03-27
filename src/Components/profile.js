@@ -5,44 +5,59 @@ export const profiles = [
     {
         id: 0,
         img: "profile-pic.png",
-        usernanme: "Your story",
+        username: "Your story",
         icon: <AiOutlinePlus className="icon" />,
+        active: ""
     },
     {
         id: 1,
-        img: "profile-3.jpg",
-        usernanme: "Jackson Juliana",
+        img: "moses-bliss.jpg",
+        username: "Moses Bliss",
+        active: "30min ago"
+
     },
     {
         id: 2,
-        img: "profile-2.jpg",
-        usernanme: "Bella Cory",
+        img: "testimony.jpg",
+        username: "Testimony",
+        active: "1h ago"
+
     },
     {
         id: 3,
         img: "elon-musk.jpg",
-        usernanme: "Elon Musk",
+        username: "Elon Musk",
+        active: "1h ago"
+
     },
     {
         id: 4,
-        img: "profile-pic.png",
-        usernanme: "Your story",
+        img: "profile-3.jpg",
+        username: "Juliet Jackson",
+        active: "1h ago"
+
     },
 
     {
         id: 5,
-        img: "profile-pic.png",
-        usernanme: "Your story",
+        img: "cutty.png",
+        username: "Maloney",
+        active: "1h ago"
+
     },
 
     {
         id: 6,
-        img: "profile-pic.png",
-        usernanme: "Your story",
+        img: "profile-2.jpg",
+        username: "Bella Cory",
+        active: "2h ago"
+
     },
     {
         id: 7,
-        img: "profile-pic.png",
-        usernanme: "Your story",
+        img: "dev-harrison.jpg",
+        username: "Dev. Harrison",
+        active: "2h ago"
+
     },
 ];
