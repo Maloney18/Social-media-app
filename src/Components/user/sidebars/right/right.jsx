@@ -1,14 +1,20 @@
 import Messages from "./messages";
+import { StyledRightSideBar } from "./styledRight";
 import Suggestions from "./suggestions";
-import "./right.css";
 
-const Right = () => {
+const RightSideBar = () => {
   return (
-    <aside className="right">
-      <Messages />
-      <Suggestions />
-    </aside>
+    <StyledRightSideBar>
+      <div className="wrapper grid">
+        <div className="item">
+          <Messages />
+        </div>
+        <div className="item">
+          <Suggestions />
+        </div>
+      </div>
+    </StyledRightSideBar>
   );
 };
 
-export default Right;
+export default RightSideBar;

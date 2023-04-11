@@ -61,7 +61,7 @@ const DeskNavBar = ({ handleMenu, Navigate }) => {
               <CgAddR className="icon" />
             </LinkWrapper>
 
-            <LinkWrapper data-title="video" hide>
+            <LinkWrapper data-title="room" hide>
               <BsCameraVideo className="icon" />
             </LinkWrapper>
             <LinkWrapper data-title="notification" hide>

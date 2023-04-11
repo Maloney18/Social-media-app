@@ -37,6 +37,10 @@ const DropDownMenu = ({ viewState, Navigate }) => {
     calcString();
   }, []);
 
+  useEffect(() => {
+    calcHeight();
+  }, [menuHeight]);
+
   const calcString = (string) => {
     let stringLength = string?.length;
 
@@ -48,7 +52,7 @@ const DropDownMenu = ({ viewState, Navigate }) => {
   };
 
   const calcHeight = (e) => {
-    const height = e.offsetHeight + 25;
+    const height = e?.offsetHeight + 25;
     setMenuHeight(height);
   };
 
@@ -131,8 +135,8 @@ const DropDownMenu = ({ viewState, Navigate }) => {
             <DropDownItem title={"create post"} leftIcon={<CgAddR />}>
               Create Post
             </DropDownItem>
-            <DropDownItem title={"video"} leftIcon={<BsCameraVideo />}>
-              video
+            <DropDownItem title={"room"} leftIcon={<BsCameraVideo />}>
+              Room
             </DropDownItem>
             <DropDownItem leftIcon={<BiFingerprint />} title={"verify account"}>
               Verify Account

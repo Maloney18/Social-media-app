@@ -16,11 +16,11 @@ const UserProfile = () => {
           </div>
           <div className="profile-info flex-cont">
             <div className="profile-image">
-              <img src="Images/profile-pic.jpg" alt="profile" />
+              <img src="Images/profile-pic.png" alt="profile" />
             </div>
             <div className="profile-user">
-              <p className="profile-name">Rich BigFame</p>
-              <p className="handle-name">@__bigfame</p>
+              <p className="profile-name">rickardoh</p>
+              <p className="handle-name">@__rickardoh</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ const UserProfile = () => {
               </div>
               <div className="other-photos-img">
                 <img
-                  src="Images/profile-pic.jpg"
+                  src="Images/profile-pic.png"
                   alt=""
                   className="other-photos-img"
                 />

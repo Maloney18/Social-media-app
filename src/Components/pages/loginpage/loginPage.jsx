@@ -174,7 +174,7 @@ function LoginPage() {
         </div>
 
         <p className="nav-to-signUp">
-          You don't have an account yet?
+          You don't have an account yet? &nbsp;
           <span onClick={() => navigate("/sign-up")} className="sign-word">
             Sign up
           </span>

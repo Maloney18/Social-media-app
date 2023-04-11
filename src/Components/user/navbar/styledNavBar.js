@@ -109,7 +109,7 @@ background: var(--primary-color);
         font-size: 1rem;
       }
       @media screen and (min-width: 64rem) {
-        width: 100%;
+        width: 80%;
         padding: 0.8rem 0.5rem 0.8rem 1rem;
       }
     }
@@ -251,7 +251,7 @@ border: 1px solid var(--blueViolet);
   &:last-of-type {
     width: 3rem;
     height: 3rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     
     .cover{
       border-radius: 50%;

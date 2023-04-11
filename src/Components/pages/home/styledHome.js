@@ -1,58 +1,48 @@
 import styled from "styled-components";
 
+/* // todo: MEDIA-QUERY FOR TABLET
+@media screen and (max-width: 820px) {
+  grid-column: span 1;
+  
+}*/
+
 export const StyledHome = styled.div`
+    width: 100%;
   & > section {
     width: 100%;
-    min-height: 100vh;
     display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 1rem;
  align-items: start;
-  place-items: center;
-  padding-top: 8rem;
+  padding-top: 6rem;
 
   
-  @media screen and (min-width: 64rem) {
-    grid-template-columns: 24% 20% 20% 24%;
-    height: 100vh;
+  @media screen and (min-width: 45rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
   }
-  @media screen and (min-width: 65rem) {
-    grid-template-columns: 22% 20% 20% 22%;
-  }
+   @media screen and (min-width: 65rem) {
+gap: 2rem;
+  } 
 
     & > .item{
       max-width: 40rem;
       margin: 0 auto;
     }
 
-    .wrapper {
+
+  }
+
+  .wrapper {
       width: 100%;
-      height: 100%;
-      /* padding-block: 6rem; */
-      
-      @media screen and (min-width: 45rem) {
-        overflow-x: hidden;
-        overflow-y: auto;
-        ::-webkit-scrollbar {
+      @media screen and (min-width: 40rem) {
+        /* overflow-x: hidden; */
+        /* overflow-y: auto; */
+        /* ::-webkit-scrollbar {
   width: 0;
   height: 0;
-  }
+  } */
       }
-      &:first-of-type, 
-      &:last-of-type {
-        display: none;
-        @media screen and (min-width: 64rem) {
-          display: grid;
-          /* margin-top: 4rem; */
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-          .item {
-          width: 100%;
-          }
-        }
-      }
-      &:nth-of-type(2) {
         grid-area: 1;
 
         @media screen and (min-width: 45rem) {
@@ -60,9 +50,6 @@ export const StyledHome = styled.div`
           grid-column: span 2;
           
         }
-        /* @media screen and (max-width: 884px) {
-      grid-area: 1;
-    } */
 
         .item {
           width: 100%;
@@ -253,7 +240,8 @@ export const StyledHome = styled.div`
             }
           }
         }
-      }
+      
+
       .item {
         padding: 1rem;
         width: 100%;
@@ -261,13 +249,16 @@ export const StyledHome = styled.div`
         background: var(--color-white);
       box-shadow: 2px 3px 5px var(--blueViolet);
 
+      & >{
+      width: 100%;
+    }
+
         .icon {
           cursor: pointer;
           font-size: 1.4rem;
         }
       }
     }
-  }
 
   .post {
     width: 100%;

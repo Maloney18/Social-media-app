@@ -2,9 +2,7 @@ import { useRef } from "react";
 import { Section } from "../../features/container";
 import { StyledHome } from "./styledHome";
 import { profiles } from "../../profile";
-import { Post, PostField, Status } from "../../user";
-import Right from "../../user/sidebars/right/right";
-import Left from "../../user/sidebars/left/left";
+import { LeftSideBar, Post, PostField, RightSideBar, Status } from "../../user";
 
 const Home = () => {
   const sliderRef = useRef(null);
@@ -22,9 +20,7 @@ const Home = () => {
   return (
     <StyledHome>
       <Section>
-        <div className="wrapper grid">
-          <Left />
-        </div>
+        <LeftSideBar />
         <div className="wrapper grid ">
           <div className="item">
             <span onClick={() => slideFunc("left")} className="prev">
@@ -42,9 +38,7 @@ const Home = () => {
             <Post />
           </div>
         </div>
-        <div className="wrapper grid">
-          <Right />
-        </div>
+        <RightSideBar />
       </Section>
     </StyledHome>
   );

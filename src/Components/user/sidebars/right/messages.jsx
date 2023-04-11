@@ -58,7 +58,6 @@ const Messages = () => {
                   </div>
                   <span className="active"></span>
                 </div>
-
                 <p className="last-message"> {`Active ${active}`}</p>
               </div>
             </div>

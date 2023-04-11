@@ -1,14 +1,13 @@
-.messages {
-    padding: 10px;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 7px;
+
+.messages{
+    padding-bottom: .5rem;
+
 }
 
-.search-bar {
+.messages .search-bar {
     position: relative;
+    padding-bottom: .5rem;
+
 }
 
 .search-icon {
@@ -35,7 +34,7 @@
     right: 15px;
     top: 6px;
     font-size: 21px;
-    color: black;
+    color: var(--color-gray-dark);
 }
 
 .link-cont {
@@ -45,12 +44,19 @@
     justify-content: space-between;
     font-weight: bold;
     font-size: 14px;
-    color: grey;
+    color: var(--color-gray);
     border-bottom: 1px solid;
+    overflow-x: auto;
+    overflow-y: hidden;    
 }
 
+.link-cont::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
 .isActive {
-    color: black;
+    color: var(--color-gray-dark);
     border-bottom: 2px solid;
     padding-bottom: 5px;
 }
@@ -80,7 +86,7 @@
 .person .img_wrapper {
     width: 50px !important;
     height: 50px !important;
-    background-color: grey;
+    background-color: var(--color-gray-lyt);
 }
 
 
@@ -100,5 +106,5 @@
 }
 
 .online {
-    color: #8a2be2;
+    color: var(--blueViolet);
 }
