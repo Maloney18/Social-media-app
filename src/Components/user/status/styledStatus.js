@@ -6,10 +6,10 @@ export const StyledStatus = styled.div`
       flex-direction: row;
       margin: 0 auto;  
       max-width: 100%;
+      
       &::-webkit-scrollbar {
         width: 0;
         height: 0;
-        background: var(--color-white);
       }
 
       gap: 1rem;

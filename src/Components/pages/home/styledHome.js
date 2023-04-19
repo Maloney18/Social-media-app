@@ -1,30 +1,48 @@
 import styled from "styled-components";
 
+/* // todo: MEDIA-QUERY FOR TABLET
+@media screen and (max-width: 820px) {
+  grid-column: span 1;
+  
+}*/
+
 export const StyledHome = styled.div`
-  .grid {
+    width: 100%;
+  & > section {
+    width: 100%;
+    display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+ align-items: start;
+  padding-top: 6rem;
+
+  
+  @media screen and (min-width: 45rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+   @media screen and (min-width: 65rem) {
+gap: 2rem;
+  } 
 
     & > .item{
-      container-type: inline-size;
+      max-width: 40rem;
+      margin: 0 auto;
     }
-    .wrapper {
-      width: 100%;
-      height: fit-content;
-      padding-top: 6rem;
-      
-      @media screen and (min-width: 45rem) {
-        padding-top: 4rem;
-        
-      }
-      &:first-of-type, 
-      &:last-of-type {
-        display: none;
-        @media screen and (min-width: 45rem) {
-          display: flex;
-          flex-direction: column;
 
-        }
+
+  }
+
+  .wrapper {
+      width: 100%;
+      @media screen and (min-width: 40rem) {
+        /* overflow-x: hidden; */
+        /* overflow-y: auto; */
+        /* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  } */
       }
-      &:nth-of-type(2) {
         grid-area: 1;
 
         @media screen and (min-width: 45rem) {
@@ -32,25 +50,28 @@ export const StyledHome = styled.div`
           grid-column: span 2;
           
         }
-        @media screen and (max-width: 884px) {
-      grid-area: 1;
-    }
 
         .item {
           width: 100%;
           grid-column: span 2;
 
+
           &:nth-of-type(1) {
             position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            /* background: transparent; */
 
           }
           &:nth-of-type(2){
+         container-type: inline-size;
 
               .combine{
                 width: 100%;
                 display: flex;
                 align-items: center;
                 gap: 2rem;
+
 
               }
 
@@ -77,15 +98,23 @@ export const StyledHome = styled.div`
       border: 1px inset var(--blueViolet);
       outline: none;
       transition: var(--transition);
-      font-size: 1rem;
+      /* font-size: 1rem; */
       border-radius: 2rem;
       padding: 0.5rem 0.5rem 0.5rem 1rem;
+      container-type: inline-size;
+
 
       &::placeholder {
-        font-size: 5cqw;
+        font-size: 6cqw;
             
+        @media screen and (min-width: 40rem) {
+      font-size:3cqw;
+
+
+
+      }        
             @media screen and (min-width: 64rem) {
-          font-size: 3cqw;
+          font-size:4cqw;
 
 
 
@@ -124,7 +153,8 @@ export const StyledHome = styled.div`
           }
           .desc{
             text-transform: capitalize;
-          font-size: 5cqw;
+
+          font-size: 4cqw;
             
             @media screen and (min-width: 64rem) {
           font-size: 3cqw;
@@ -163,17 +193,10 @@ export const StyledHome = styled.div`
               justify-content: space-between;
               padding-bottom: 2rem;
 
-              /* &:nth-of-type(1){
-            position: relative;
-                            .img_wrapper{
-                                border: 1px solid var(--color-gray);
-                            }
-                        } */
               .img_wrapper {
                 width: 70px;
                 height: 70px;
                 cursor: pointer;
-
                 border-radius: 50%;
                 overflow: hidden;
 
@@ -184,13 +207,9 @@ export const StyledHome = styled.div`
 
                   }
                 }
-                /* border: 2px solid var(--blueViolet); */
                 img {
                   width: 100%;
-                  /* height: 100%; */
                   aspect-ratio: 1/1;
-
-
                   border-radius: 50%;
                   object-fit: cover;
                   /* border: 2px solid var(--color-white); */
@@ -206,6 +225,7 @@ export const StyledHome = styled.div`
                   width: 100%;
                   font-weight: bold;
                   opacity: 0.6;
+                  /* color:var(--color-gray-dark); */
                   text-transform: capitalize;
                   font-size: 0.8rem;
                   &:nth-of-type(1) {
@@ -220,19 +240,24 @@ export const StyledHome = styled.div`
             }
           }
         }
-      }
+      
+
       .item {
         padding: 1rem;
         width: 100%;
         border-radius: 1rem;
         background: var(--color-white);
+
+      & >{
+      width: 100%;
+    }
+
         .icon {
           cursor: pointer;
           font-size: 1.4rem;
         }
       }
     }
-  }
 
   .post {
     width: 100%;
@@ -317,6 +342,8 @@ export const StyledHome = styled.div`
 
         .text_cont {
           margin-left: 5rem;
+          color:var(--color-gray-dark);
+
         }
       }
     }

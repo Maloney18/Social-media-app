@@ -10,7 +10,7 @@ const NotFound = () => {
     <PageNotFound>
       <Section>
         <h1>Page Not Found</h1> <br />
-        <NavBtn onClick={() => navigate("/")}>Go To Home</NavBtn>
+        <NavBtn onClick={() => navigate(-1)}>Go Back</NavBtn>
       </Section>
     </PageNotFound>
   );

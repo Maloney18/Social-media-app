@@ -1,4 +1,3 @@
-import './App.css';
 import LoginPage from './Components/pages/loginpage/loginPage';
 import SignUpPage from './Components/pages/signupPage/signUp';
 // import ForgetPassword from './Components/pages/forget-password/forgetPassword';

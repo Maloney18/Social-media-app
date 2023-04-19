@@ -1,17 +1,23 @@
 .suggestions {
-    padding: 15px;
-    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: white;
-    border-radius: 7px;
 }
 
 .upper-most {
     display: flex;
+    width: 100%;
     align-items: center;
+    padding-bottom: .5rem;
     justify-content: space-between;
+}
+
+.upper-most  h2{
+    font-size: 1.2rem;
+    width: 100%;
 }
 
 .see-all {
@@ -20,6 +26,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: all 0.07 ease-in;
+    white-space: nowrap;
 }
 
 .see-all:hover {
@@ -30,8 +37,17 @@
     display: flex;
     gap: 15px;
     flex-direction: column;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 246px;
+
 }
+
+.all-suggestion::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.1rem;
+  }
+
 
 .add-new {
     display: flex;
@@ -39,20 +55,12 @@
     gap: 10px;
     width: 94%;
 }
-
-.new-image {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+.add-new .img_wrapper {
+    width: 50px !important;
+    height: 50px !important;
+    background-color: grey;
 }
 
-.new-image img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
 
 .new-name {
     flex: 2;
@@ -68,12 +76,12 @@
 }
 
 .add-icon {
-    width: 30px;
-    height: 30px;
+    width: calc(30px * 0.7);
+    height: calc(30px * 0.7);
     border-radius: 50%;
     display: flex;
     align-items: center;
-    font-size: 17px;
+    font-size: 1rem;
     justify-content: center;
     cursor: pointer;
     transition: all 0.07s ease-in;

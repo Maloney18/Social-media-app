@@ -17,38 +17,30 @@ const Home = () => {
     } else {
       slider.scrollBy(200, 0);
     }
-  };  
+  };
 
   return (
     <StyledHome>
       <Section>
-        <div className="grid">
-          {/*? left side-bar*/}
-          <div className="wrapper grid">
-            <Left />
+        <Left />
+        <div className="wrapper grid ">
+          <div className="item">
+            <span onClick={() => slideFunc("left")} className="prev">
+              &#10094;
+            </span>
+            <span onClick={() => slideFunc("right")} className="next">
+              &#10095;
+            </span>
+            <Status sliderRef={sliderRef} profiles={profiles} />
           </div>
-          <div className="wrapper grid">
-            <div className="item">
-              <span onClick={() => slideFunc("left")} className="prev">
-                &#10094;
-              </span>
-              <span onClick={() => slideFunc("right")} className="next">
-                &#10095;
-              </span>
-              <Status sliderRef={sliderRef} profiles={profiles} />
-            </div>
-            <div className="item">
-              <PostField />
-            </div>
-            <div className="item">
-              <Post />
-            </div>
+          <div className="item">
+            <PostField />
           </div>
-          {/* ? right side-bar */}
-          <div className="wrapper grid">
-            <Right />
+          <div className="item">
+            <Post />
           </div>
         </div>
+        <Right />
       </Section>
     </StyledHome>
   );

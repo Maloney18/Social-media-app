@@ -11,4 +11,19 @@ const Left = () => {
   )
 }
 
-export default Left
+// const LeftSideBar = () => {
+//   return (
+//     <StyledLeftSideBar>
+//       <div className="wrapper grid">
+//         <div className="item">
+//           <Activity />
+//         </div>
+//         <div className="item">
+//           <Explore />
+//         </div>
+//       </div>
+//     </StyledLeftSideBar>
+//   );
+// };
+
+export default Left;

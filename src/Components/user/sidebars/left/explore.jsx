@@ -33,7 +33,7 @@ const Explore = () => {
           </div>
 
           <div className="exp-images-cont right-image">
-            <img src="Images/profile-pic.jpg" alt="" />
+            <img src="Images/moses-bliss.jpg" alt="" />
           </div>
 
           <div className="exp-images-cont col3">
@@ -63,7 +63,7 @@ const Explore = () => {
           </div>
 
           <div className="exp-images-cont col5">
-            <img src="Images/profile-pic.jpg" alt="" />
+            <img src="Images/cynthia.jpeg" alt="" />
           </div>
         </div>
       </div>
