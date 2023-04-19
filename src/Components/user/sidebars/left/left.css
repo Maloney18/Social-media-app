@@ -1,0 +1,6 @@
+.left {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 425px 500px;
+    gap: 20px;
+}

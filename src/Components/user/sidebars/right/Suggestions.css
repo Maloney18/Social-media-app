@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 94%;
 }
 
 .new-image {
@@ -74,9 +75,13 @@
     align-items: center;
     font-size: 17px;
     justify-content: center;
-    border: 1px solid;
     cursor: pointer;
     transition: all 0.07s ease-in;
+    background-color: rgba(204, 202, 202, 0.384);
+}
+
+.add-icon svg {
+    fill: #8a2be2;
 }
 
 .add-icon:hover {

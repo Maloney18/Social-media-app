@@ -85,6 +85,7 @@
 
 .person-info {
     width: 70%;
+    cursor: pointer;
 }
 
 .name-container {

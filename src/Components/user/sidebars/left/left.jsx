@@ -1,9 +1,13 @@
-// abeg i go dey do this part later, na this early morning i push the update. Na today i dey go back to school. I don late like this seff
-// no vex
+import Notification from "./notification"
+import Explore from "./explore"
+import './left.css'
 
 const Left = () => {
   return (
-    <div></div>
+    <div className="left">
+      <Notification />
+      <Explore />
+    </div>
   )
 }
 
