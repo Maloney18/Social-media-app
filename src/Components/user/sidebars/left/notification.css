@@ -1,0 +1,104 @@
+.notification {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.note-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-head span {
+    color: grey;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.07s ease-in;
+}
+
+.note-head span:hover {
+    color: rgb(26, 25, 25);
+}
+
+.mentions, .new-notif {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bolder-text {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lighter-word {
+    color: grey;
+}
+
+.mentions-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.item-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.up-word {
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.up-word:hover {
+    opacity: 0.7;
+}
+
+.all-new-notif {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: scroll;
+}
+
+.new-notif-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 94%;
+}
+
+.notif-icon {
+    width: 30px;
+    color: #8a2be2;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    justify-content: center;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.07s ease-in;
+}
+
+.notif-icon:hover {
+    opacity: 0.6;
+}
